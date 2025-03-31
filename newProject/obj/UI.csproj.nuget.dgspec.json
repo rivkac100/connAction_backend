@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\newProject\\UI.csproj": {}
+    "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\newProject\\UI.csproj": {}
   },
   "projects": {
-    "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\BL.csproj": {
+    "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\BL.csproj",
+        "projectUniqueName": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\BL.csproj",
+        "projectPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\BL.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\obj\\",
+        "outputPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,8 +35,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\Dal.csproj": {
-                "projectPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\Dal.csproj"
+              "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\Dal.csproj": {
+                "projectPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\Dal.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\Dal.csproj": {
+    "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\Dal.csproj",
+        "projectUniqueName": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\Dal.csproj",
+        "projectPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Dal\\obj\\",
+        "outputPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\newProject\\UI.csproj": {
+    "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\newProject\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\newProject\\UI.csproj",
+        "projectUniqueName": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\newProject\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\newProject\\UI.csproj",
+        "projectPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\newProject\\UI.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\newProject\\obj\\",
+        "outputPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\newProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -185,8 +185,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\BL.csproj": {
-                "projectPath": "D:\\גיטי קאהן\\פרויקט סיום\\newProject\\Bl\\BL.csproj"
+              "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\BL.csproj": {
+                "projectPath": "A:\\גיטי וחוי\\CHAVI AND GITTY\\bsd-c--c-g\\Bl\\BL.csproj"
               }
             }
           }
