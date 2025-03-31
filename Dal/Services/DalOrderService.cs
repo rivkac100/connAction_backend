@@ -40,9 +40,9 @@ namespace Dal.Services
         {
             return GetAll().Find(x=>x.OrderId==id);
         }
-        public Order? GetByDate(DateOnly date)
+        public List<Order>? GetByDate(DateOnly date)
         {
-            return GetAll().Find(x => DateOnly.FromDateTime(x.Date)  == date);
+            return GetAll().FindAll(x => DateOnly.FromDateTime(x.Date)  == date).ToList();
         }
         //public List<Order> GetByorderId(int orderId)
         //{

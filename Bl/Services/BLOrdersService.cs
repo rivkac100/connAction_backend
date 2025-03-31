@@ -49,9 +49,9 @@ namespace BL.Services
             Order o = dal.Order.GetById(id);
             return toBlOrder(o);
         }
-        public BlOrder GetByDate(DateOnly date)
+        public List<Order> GetByDate(DateOnly date)
         {
-            Order o = dal.Order.GetByDate(date);
+            List<Order> o = dal.Order.GetByDate(date);
             return toBlOrder(o);
         }
 
