@@ -40,12 +40,15 @@ namespace Dal.Services
         {
             return GetAll().Find(x=>x.OrderId==id);
         }
-
+        public Order? GetByDate(DateOnly date)
+        {
+            return GetAll().Find(x => DateOnly.FromDateTime(x.Date)  == date);
+        }
         //public List<Order> GetByorderId(int orderId)
         //{
         //    return dbcontext.Orders.ToList().FindAll(x => x.orderId == orderId);
         //}
-      
+
         /// <summary> 
         ///update order in data base
         /// </summary>
