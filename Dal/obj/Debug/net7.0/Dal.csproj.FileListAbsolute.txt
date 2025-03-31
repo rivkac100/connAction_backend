@@ -1,0 +1,14 @@
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\ref\Dal.dll
