@@ -49,10 +49,10 @@ namespace BL.Services
             Order o = dal.Order.GetById(id);
             return toBlOrder(o);
         }
-        public List<Order> GetByDate(DateOnly date)
+        public List<BlOrder> GetByDate(DateOnly date)
         {
             List<Order> o = dal.Order.GetByDate(date);
-            return toBlOrder(o);
+            return ListToBl(o);
         }
 
         public void Update(BlOrder item)
@@ -105,5 +105,7 @@ namespace BL.Services
             o.ForEach(x => orders.Add(toOrder(x)));
             return orders;
         }
+
+    
     }
 }

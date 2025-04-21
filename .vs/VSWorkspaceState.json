@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Dal",
+    "\\Dal\\Api",
+    "\\Server"
   ],
+  "SelectedNode": "\\Server\\Server.csproj",
   "PreviewInSolutionExplorer": false
 }
