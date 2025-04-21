@@ -15,6 +15,6 @@ namespace BL.Api
         public List<BlOrder> GetByCustomerId(int customerId);
         public List<BlOrder> ListToBl(List<Order> o);
         public List<Order> ListToDal(List<BlOrder> o);
-        public List<Order> GetByDate(DateOnly date)
+        public List<BlOrder> GetByDate(DateOnly date);
     }
 }
