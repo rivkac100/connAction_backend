@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Dal",
-    "\\Dal\\Api",
-    "\\Server"
+    "\\Dal"
   ],
-  "SelectedNode": "\\Server\\Server.csproj",
+  "SelectedNode": "\\newProject.sln",
   "PreviewInSolutionExplorer": false
 }
