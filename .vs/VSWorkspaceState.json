@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Dal"
+    "\\Bl",
+    "\\Bl\\Services",
+    "\\Dal",
+    "\\Server"
   ],
   "SelectedNode": "\\newProject.sln",
   "PreviewInSolutionExplorer": false
