@@ -28,7 +28,14 @@ namespace Dal.Services
             dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
             if (clist.Find(x => x.InstituteId == id) != null)
             dbcontext.Customers.Remove(clist.Find(x => x.InstituteId == id));
-            dbcontext?.SaveChanges();
+            try
+            {
+                dbcontext?.SaveChanges();
+            }catch (Exception ex)
+            {
+                throw new Exception("cant save chenges -customer")
+            }
+           
         }
 
         public List<Customer> GetAll()
