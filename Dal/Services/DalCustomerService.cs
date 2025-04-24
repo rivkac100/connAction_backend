@@ -33,7 +33,7 @@ namespace Dal.Services
                 dbcontext?.SaveChanges();
             }catch (Exception ex)
             {
-                throw new Exception("cant save chenges -customer")
+                throw new Exception("cant save chenges -customer");
             }
            
         }
