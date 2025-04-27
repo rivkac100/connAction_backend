@@ -1,6 +1,4 @@
-﻿//בס"ד
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Dal.Models;
@@ -18,6 +16,6 @@ public partial class Activity
     public int Price { get; set; }
 
     public int NightPrice { get; set; }
-    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
+    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }
