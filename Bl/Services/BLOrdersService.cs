@@ -20,7 +20,7 @@ namespace BL.Services
         }
         public void Create(BlOrder item)
         {
-            dal.Order.Create(toOrder(item));
+            dal.Order.Create(fromBlToDal(item));
         }
 
         public void Delete(int id)
@@ -35,7 +35,7 @@ namespace BL.Services
             var oList = dal.Order.GetAll();
             List<BlOrder> list = new();
             oList.ForEach(o => list.Add(
-                toBlOrder(o)));
+                fromDalToBl(o)));
             return list;
         }
 
@@ -47,7 +47,7 @@ namespace BL.Services
         public BlOrder GetById(int id)
         {
             Order o = dal.Order.GetById(id);
-            return toBlOrder(o);
+            return fromDalToBl(o);
         }
         public List<BlOrder> GetByDate(DateOnly date)
         {
@@ -57,27 +57,27 @@ namespace BL.Services
 
         public void Update(BlOrder item)
         {
-            dal.Order.Update(toOrder(item));
+            dal.Order.Update(fromBlToDal(item));
         }
 
-        public BlOrder toBlOrder(Order o)
+        public BlOrder fromDalToBl(Order item)
         {
-            
+
             BlOrder order = new();
-            order.OrderId = o.OrderId;
-            order.CustomerId = o.CustomerId;
-            order.ActivityId = o.ActivityId;
-            order.AmountOfParticipants = o.AmountOfParticipants;
-            order.BrokerId = o.BrokerId;
-            order.BrokerName = o.Broker?.BrokerName;
-            order.CustomerName = o.Customer?.InstituteName;
-            order.ActivityName = o.Activity?.ActivityDescription;
-            order.Payment = o.Payment;
-            order.ActiveHour = TimeOnly.FromDateTime(o.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
-            order.Date = DateOnly.FromDateTime( o.Date);
+            order.OrderId = item.OrderId;
+            order.CustomerId = item.CustomerId;
+            order.ActivityId = item.ActivityId;
+            order.AmountOfParticipants = item.AmountOfParticipants;
+            order.BrokerId = item.BrokerId;
+            order.BrokerName = item.Broker?.BrokerName;
+            order.CustomerName = item.Customer?.InstituteName;
+            order.ActivityName = item.Activity?.ActivityDescription;
+            order.Payment = item.Payment;
+            order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
+            order.Date = DateOnly.FromDateTime( item.Date);
             return order;
         }
-        public Order toOrder(BlOrder item)
+        public Order fromBlToDal(BlOrder item)
         {
             Order order = new Order
             {
@@ -96,16 +96,27 @@ namespace BL.Services
         public List<BlOrder> ListToBl(List<Order> o)
         {
            List< BlOrder> orders = new();
-           o.ForEach(x=> orders.Add(toBlOrder(x)));
+           o.ForEach(x=> orders.Add(fromDalToBl(x)));
             return orders;
         }
         public List<Order> ListToDal(List<BlOrder> o)
         {
             List<Order> orders = new();
-            o.ForEach(x => orders.Add(toOrder(x)));
+            o.ForEach(x => orders.Add(fromBlToDal(x)));
             return orders;
         }
 
-    
+        
+
+       
+        public List<BlOrder> listFromDalToBl(List<Order> item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Order> listFromBlToDal(List<BlOrder> item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Services
 {
-    public class DalManagerService : IManager
+    public class DalManagerService : IDalManager
     {
         dbcontext dbcontext;
         public DalManagerService(dbcontext data)

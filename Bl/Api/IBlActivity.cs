@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL.Api
 {
-    public interface IBlActivity: IBlCrud<BL.Models.BlActivity>
+    public interface IBlActivity: IBlCrud<BL.Models.BlActivity,Dal.Models.Activity>
     {
     }
 }
