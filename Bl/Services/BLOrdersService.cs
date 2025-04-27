@@ -52,7 +52,7 @@ namespace BL.Services
         public List<BlOrder> GetByDate(DateOnly date)
         {
             List<Order> o = dal.Order.GetByDate(date);
-            return ListToBl(o);
+            return listFromDalToBl(o);
         }
 
         public void Update(BlOrder item)
@@ -93,30 +93,24 @@ namespace BL.Services
 
             return order;
         }
-        public List<BlOrder> ListToBl(List<Order> o)
+        public List<BlOrder> listFromDalToBl(List<Order> item)
+
         {
-           List< BlOrder> orders = new();
-           o.ForEach(x=> orders.Add(fromDalToBl(x)));
+            List< BlOrder> orders = new();
+            item.ForEach(x=> orders.Add(fromDalToBl(x)));
             return orders;
         }
-        public List<Order> ListToDal(List<BlOrder> o)
+        public List<Order> listFromBlToDal(List<BlOrder> item)
         {
             List<Order> orders = new();
-            o.ForEach(x => orders.Add(fromBlToDal(x)));
+            item.ForEach(x => orders.Add(fromBlToDal(x)));
             return orders;
         }
 
         
 
        
-        public List<BlOrder> listFromDalToBl(List<Order> item)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        public List<Order> listFromBlToDal(List<BlOrder> item)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

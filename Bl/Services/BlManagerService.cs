@@ -1,7 +1,11 @@
-﻿using BL.Api;
+﻿
+//בס"ד
+using BL.Api;
 using BL.Models;
+using Dal.Api;
 using Dal.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,19 +15,37 @@ namespace BL.Services
 {
     public class BlManagerService : IBlManager
     {
+        IDal dal;
+        //IBlOrder order;
+        public BlManagerService(IDal dal, IBlOrder order)
+        {
+            this.dal = dal;
+            //this.order = order;
+        }
         public void Create(BlManager item)
         {
-            throw new NotImplementedException();
+           
+            dal.Manager.Create(fromBlToDal(item));
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dal.Manager.Delete(id);
         }
 
         public Manager fromBlToDal(BlManager item)
         {
-            throw new NotImplementedException();
+            Manager m = new Manager()
+            {
+                //InstituteId = customer.InstituteId,
+                Id = item.Id,
+                ManagerEmail = item.ManagerEmail,
+                ManagerName = item.ManagerName,
+                ManagerPhone = item.ManagerPhone,
+                ManagerFax = item.ManagerFax,
+
+            };
+            return m;
         }
 
         public BlManager fromDalToBl(Manager item)
@@ -33,12 +55,15 @@ namespace BL.Services
 
         public List<BlManager> Get()
         {
-            throw new NotImplementedException();
+            var mList = dal.Manager.GetAll();
+         return listFromDalToBl(mList);
+        
         }
 
         public BlManager GetById(int id)
         {
-            throw new NotImplementedException();
+            Manager c = dal.Manager.GetById(id);
+            return fromDalToBl(c);
         }
 
         public List<Manager> listFromBlToDal(List<BlManager> item)
@@ -48,12 +73,15 @@ namespace BL.Services
 
         public List<BlManager> listFromDalToBl(List<Manager> item)
         {
-            throw new NotImplementedException();
+            List<BlManager> list = new();
+            item.ForEach(c => list.Add(fromDalToBl(c)));
+            return list;
         }
 
         public void Update(BlManager item)
         {
-            throw new NotImplementedException();
+         
+            dal.Manager.Update(fromBlToDal(item));
         }
     }
 }

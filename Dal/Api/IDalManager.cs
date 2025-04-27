@@ -1,4 +1,6 @@
-﻿using Dal.Models;
+﻿//בס"ד
+
+using Dal.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

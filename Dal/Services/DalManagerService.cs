@@ -23,7 +23,21 @@ namespace Dal.Services
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var mlist = dbcontext.Managers.ToList();
+           // var olist = dbcontext.Orders.ToList();
+            //if (olist.Find(x => x.CustomerId == id) != null)
+            //    dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
+            if (mlist.Find(x => x.Id == id) != null)
+                dbcontext.Managers.Remove(mlist.Find(x => x.Id == id));
+            try
+            {
+                dbcontext?.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("cant save chenges -manager");
+            }
+
         }
 
         public List<Manager> GetAll()

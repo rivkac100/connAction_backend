@@ -1,4 +1,6 @@
-﻿using BL.Models;
+﻿
+//בס"ד
+using BL.Models;
 using Dal.Models;
 using System;
 using System.Collections.Generic;
