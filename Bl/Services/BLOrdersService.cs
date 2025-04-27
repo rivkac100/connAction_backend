@@ -28,15 +28,11 @@ namespace BL.Services
             dal.Order.Delete(id);
         }
 
-
-
         public List<BlOrder> Get()
         {
             var oList = dal.Order.GetAll();
-            List<BlOrder> list = new();
-            oList.ForEach(o => list.Add(
-                fromDalToBl(o)));
-            return list;
+            
+            return listFromDalToBl(oList);
         }
 
         public List<BlOrder> GetByCustomerId(int customerId)

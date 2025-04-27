@@ -88,12 +88,16 @@ namespace BL.Services
 
         public List<BlActivity> listFromDalToBl(List<Dal.Models.Activity> item)
         {
-            throw new NotImplementedException();
+            List<BlActivity> ls= new List<BlActivity>();    
+            item.ForEach(x=>ls.Add(fromDalToBl(x)));
+            return ls;
         }
 
         public List<Dal.Models.Activity> listFromBlToDal(List<BlActivity> item)
         {
-            throw new NotImplementedException();
+            List<Dal.Models.Activity> ls = new List<Dal.Models.Activity>();
+            item.ForEach(x => ls.Add(fromBlToDal(x)));
+            return ls;
         }
     }
 } 

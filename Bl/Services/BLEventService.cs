@@ -29,11 +29,6 @@ namespace BL.Services
             dal.Event.Delete(id);
         }
 
-      
-
-
-       
-
         public List<BlEvent> Get()
         {
             var eList = dal.Event.GetAll();
@@ -51,12 +46,16 @@ namespace BL.Services
 
         public List<Event> listFromBlToDal(List<BlEvent> item)
         {
-            throw new NotImplementedException();
+           List<Event> list = new List<Event>();
+            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            return list;
         }
 
         public List<BlEvent> listFromDalToBl(List<Event> item)
         {
-            throw new NotImplementedException();
+            List<BlEvent> list = new List<BlEvent>();
+            item.ForEach(x => list.Add(fromDalToBl(x)));
+            return list;
         }
 
         public void Update(BlEvent item)

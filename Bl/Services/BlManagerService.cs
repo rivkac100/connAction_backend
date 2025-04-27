@@ -17,7 +17,7 @@ namespace BL.Services
     {
         IDal dal;
         //IBlOrder order;
-        public BlManagerService(IDal dal, IBlOrder order)
+        public BlManagerService(IDal dal)
         {
             this.dal = dal;
             //this.order = order;
@@ -37,7 +37,7 @@ namespace BL.Services
         {
             Manager m = new Manager()
             {
-                //InstituteId = customer.InstituteId,
+               
                 Id = item.Id,
                 ManagerEmail = item.ManagerEmail,
                 ManagerName = item.ManagerName,
@@ -50,7 +50,17 @@ namespace BL.Services
 
         public BlManager fromDalToBl(Manager item)
         {
-            throw new NotImplementedException();
+            BlManager m = new BlManager()
+            {
+                
+                Id = item.Id,
+                ManagerEmail = item.ManagerEmail,
+                ManagerName = item.ManagerName,
+                ManagerPhone = item.ManagerPhone,
+                ManagerFax = item.ManagerFax,
+
+            };
+            return m;
         }
 
         public List<BlManager> Get()
@@ -68,7 +78,9 @@ namespace BL.Services
 
         public List<Manager> listFromBlToDal(List<BlManager> item)
         {
-            throw new NotImplementedException();
+            List<Manager> list = new List<Manager>();
+            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            return list;
         }
 
         public List<BlManager> listFromDalToBl(List<Manager> item)
