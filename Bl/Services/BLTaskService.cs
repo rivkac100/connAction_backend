@@ -30,36 +30,31 @@ namespace BL.Services
             dal.Task.Delete(id);
         }
 
-       
-
-        public BlTask fromDalToBl(Dal.Models.Task item)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<BlTask> Get()
         {
             var tList = dal.Task.GetAll();
-            List<BlTask> list = new();
-            tList.ForEach(t => list.Add(
-                toBlTask(t)));
-            return list;
+           
+            return listFromDalToBl(tList);
         }
 
         public BlTask GetById(int id)
         {
             Dal.Models.Task t = dal.Task.GetById(id);
-            return toBlTask(t);
+            return fromDalToBl(t);
         }
 
         public List<Dal.Models.Task> listFromBlToDal(List<BlTask> item)
         {
-            throw new NotImplementedException();
+            var ls= new List<Dal.Models.Task>();
+            item.ForEach(x => ls.Add(fromBlToDal(x)));
+            return ls;
         }
 
         public List<BlTask> listFromDalToBl(List<Dal.Models.Task> item)
         {
-            throw new NotImplementedException();
+            List<BlTask> ls= new List<BlTask>();
+            item.ForEach(x=>ls.Add(fromDalToBl(x)));
+            return ls;
         }
 
         public void Update(BlTask item)
@@ -67,23 +62,24 @@ namespace BL.Services
             dal.Task.Update(fromBlToDal(item));
         }
 
-        private BlTask toBlTask(Dal.Models.Task t)
-        {
+         public BlTask fromDalToBl(Dal.Models.Task item)
+         {
             BlTask task = new();
-            task.TaskId = t.TaskId;
-            task.TaskIsDone=t.TaskIsDone;
-            task.TaskDescription = t.TaskDescription;
-            task.TaskTime = t.TaskTime;
+            task.TaskId = item.TaskId;
+            task.TaskIsDone= item.TaskIsDone;
+            task.TaskDescription = item.TaskDescription;
+            task.TaskTime = item.TaskTime;
             return task;
-        }
-        public Dal.Models.Task fromBlToDal(BlTask item)
-        {
-            Dal.Models.Task task = new Dal.Models.Task();
+         }
+
+           public Dal.Models.Task fromBlToDal(BlTask item)
+           {
+            Dal.Models.Task task = new();
             task.TaskId = item.TaskId;
             task.TaskIsDone = item.TaskIsDone;          
             task.TaskDescription = item.TaskDescription;
             task.TaskTime = item.TaskTime;
             return task;
-        }
+           }
     }
 }

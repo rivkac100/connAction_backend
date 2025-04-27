@@ -34,17 +34,17 @@ namespace BL.Models
         public decimal? Due { get; set; }
 
         public  ICollection<BlOrder> Orders { get; set; } = new List<BlOrder>();
-        public BlCustomer(string instituteName, string mobile, string email, string contactName, string contactPhone, string community)
-        {
-            this.InstituteName = instituteName;
-            this.Mobile = mobile;
-            this.Email = email;
-            this.ContactName = contactName;
-            this.ContactPhone = contactPhone;
-            this.Community = community;
-            this.Amount = 0;
-            this.Due = 0;
+        //public BlCustomer(string instituteName, string mobile, string email, string contactName, string contactPhone, string community)
+        //{
+        //    this.InstituteName = instituteName;
+        //    this.Mobile = mobile;
+        //    this.Email = email;
+        //    this.ContactName = contactName;
+        //    this.ContactPhone = contactPhone;
+        //    this.Community = community;
+        //    this.Amount = 0;
+        //    this.Due = 0;
 
-        }
+        //}
     }
 }
