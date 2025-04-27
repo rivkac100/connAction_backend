@@ -42,6 +42,16 @@ namespace BL.Services
             dal.Customer.Delete(id);
         }
 
+        public Customer fromBlToDal(BlCustomer item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BlCustomer fromDalToBl(Customer item)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<BlCustomer> Get()
         {
             var cList = dal.Customer.GetAll();
@@ -58,6 +68,16 @@ namespace BL.Services
             { InstituteId = c.InstituteId, Fax = c.Fax, City = c.City, Amount = c.Amount, Due = c.Due, Orders = order.ListToBl(c.Orders.ToList()) };
             return customer;
 
+        }
+
+        public List<Customer> listFromBlToDal(List<BlCustomer> item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<BlCustomer> listFromDalToBl(List<Customer> item)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(BlCustomer customer)

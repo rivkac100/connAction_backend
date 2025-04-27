@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    public interface IManager:ICrud<Manager>
+    public interface IDalManager:ICrud<Manager>
     {
     }
 }

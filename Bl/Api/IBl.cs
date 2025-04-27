@@ -14,6 +14,7 @@ namespace BL.Api
         public IBlTask Task { get; }
         public IBlActivity Activity { get; }
         public IBlEvent Event { get; }
+        public IBlManager Manager { get; }
 
     }
 }

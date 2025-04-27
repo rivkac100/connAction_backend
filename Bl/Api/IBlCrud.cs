@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL.Api
 {
-    public interface IBlCrud<T>
+    public interface IBlCrud<T,S>
     {
         List<T> Get();
         T GetById(int id);
@@ -17,5 +17,9 @@ namespace BL.Api
         void Update(T item);
         void Delete(int id);
 
+        T fromDalToBl(S item);
+        S fromBlToDal(T item);
+        List<T> listFromDalToBl(List<S> item);
+        List<S> listFromBlToDal(List<T> item);
     }
 }

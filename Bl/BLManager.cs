@@ -18,6 +18,8 @@ namespace Bl
 
         public IBlActivity Activity { get; }
         public IBlEvent Event { get; set; }
+        public IBlManager Manager { get; set; }
+
         public BLManager()
         {
             /*IDal dal = new DalManager();
@@ -32,6 +34,7 @@ namespace Bl
             services.AddSingleton<IBlTask, BLTaskService>();
             services.AddSingleton<IBlActivity, BLActivityService>();
             services.AddSingleton<IBlEvent, BLEventService>();
+            services.AddSingleton<IBlManager, BlManagerService>();
 
             // ... 
             // הגדרת ספק לאוסף הסרוויסים
@@ -42,6 +45,7 @@ namespace Bl
             Task = serviceProvider.GetRequiredService<IBlTask>();
             Activity =serviceProvider.GetRequiredService<IBlActivity>();
             Event=serviceProvider.GetRequiredService<IBlEvent>();
+            Manager=serviceProvider.GetRequiredService<IBlManager>();
         }
     }
 }

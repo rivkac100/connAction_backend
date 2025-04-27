@@ -22,12 +22,19 @@ namespace BL.Services
         }
         public void Create(BlTask item)
         {
-            dal.Task.Create(toTask(item));
+            dal.Task.Create(fromBlToDal(item));
         }
 
         public void Delete(int id)
         {
             dal.Task.Delete(id);
+        }
+
+       
+
+        public BlTask fromDalToBl(Dal.Models.Task item)
+        {
+            throw new NotImplementedException();
         }
 
         public List<BlTask> Get()
@@ -45,9 +52,19 @@ namespace BL.Services
             return toBlTask(t);
         }
 
+        public List<Dal.Models.Task> listFromBlToDal(List<BlTask> item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<BlTask> listFromDalToBl(List<Dal.Models.Task> item)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(BlTask item)
         {
-            dal.Task.Update(toTask(item));
+            dal.Task.Update(fromBlToDal(item));
         }
 
         private BlTask toBlTask(Dal.Models.Task t)
@@ -59,13 +76,13 @@ namespace BL.Services
             task.TaskTime = t.TaskTime;
             return task;
         }
-        private Dal.Models.Task  toTask(BlTask t)
+        public Dal.Models.Task fromBlToDal(BlTask item)
         {
             Dal.Models.Task task = new Dal.Models.Task();
-            task.TaskId = t.TaskId;
-            task.TaskIsDone = t.TaskIsDone;          
-            task.TaskDescription = t.TaskDescription;
-            task.TaskTime = t.TaskTime;
+            task.TaskId = item.TaskId;
+            task.TaskIsDone = item.TaskIsDone;          
+            task.TaskDescription = item.TaskDescription;
+            task.TaskTime = item.TaskTime;
             return task;
         }
     }
