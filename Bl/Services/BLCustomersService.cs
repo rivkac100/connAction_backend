@@ -57,7 +57,7 @@ namespace BL.Services
             var cList = dal.Customer.GetAll();
             List<BlCustomer> list = new();
             cList.ForEach(c => list.Add(new BlCustomer(c.InstituteName, c.Mobile, c.Email, c.ContactName, c.ContactPhone, c.Community)
-            { InstituteId = c.InstituteId, Fax = c.Fax, Amount = c.Amount,City=c.City, Due = c.Due,Orders=order.ListToBl(c.Orders.ToList()) }));
+            { InstituteId = c.InstituteId, Fax = c.Fax, Amount = c.Amount,City=c.City, Due = c.Due,Orders=order.listFromDalToBl(c.Orders.ToList()) }));
             return list;
         }
 
@@ -65,7 +65,7 @@ namespace BL.Services
         {
             Customer c = dal.Customer.GetById(id);
             BlCustomer customer = new(c.InstituteName, c.Mobile, c.Email, c.ContactName, c.ContactPhone, c.Community)
-            { InstituteId = c.InstituteId, Fax = c.Fax, City = c.City, Amount = c.Amount, Due = c.Due, Orders = order.ListToBl(c.Orders.ToList()) };
+            { InstituteId = c.InstituteId, Fax = c.Fax, City = c.City, Amount = c.Amount, Due = c.Due, Orders = order.listFromDalToBl(c.Orders.ToList()) };
             return customer;
 
         }
