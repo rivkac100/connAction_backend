@@ -1,6 +1,4 @@
-﻿//בס"ד
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Dal.Models;
@@ -21,7 +19,7 @@ public partial class Order
 
     public int ActivityId { get; set; }
 
-    public virtual Activity Activity { get; set; }=null!;
+    public virtual Activity Activity { get; set; } = null!;
 
     public virtual Broker? Broker { get; set; }
 

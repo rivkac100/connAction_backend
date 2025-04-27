@@ -1,6 +1,4 @@
-﻿//בס"ד
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +22,8 @@ public partial class dbcontext : DbContext
     public virtual DbSet<Customer> Customers { get; set; }
 
     public virtual DbSet<Event> Events { get; set; }
+
+    public virtual DbSet<Manager> Managers { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
 
@@ -136,6 +136,32 @@ public partial class dbcontext : DbContext
                 .HasColumnName("title");
         });
 
+        modelBuilder.Entity<Manager>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Managers__3214EC07EF89005F");
+
+            entity.Property(e => e.ManagerEmail)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerEmail");
+            entity.Property(e => e.ManagerFax)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerFax");
+            entity.Property(e => e.ManagerName)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerName");
+            entity.Property(e => e.ManagerPhone)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerPhone");
+            entity.Property(e => e.ManagerTel)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerTel");
+        });
+
         modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(e => e.OrderId).HasName("PK__tmp_ms_x__0809335DC5B9C397");
@@ -152,14 +178,19 @@ public partial class dbcontext : DbContext
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("payment");
 
+            entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.ActivityId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Orders_ToTable_2 (activityId)");
+
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)
-                .HasConstraintName("FK_Orders_ToTable_1");
+                .HasConstraintName("FK_Orders_ToTable_0");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Orders_ToTable");
+                .HasConstraintName("FK_Orders_ToTable_1");
         });
 
         modelBuilder.Entity<Task>(entity =>
