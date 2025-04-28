@@ -43,6 +43,7 @@ namespace BL.Services
                 ManagerName = item.ManagerName,
                 ManagerPhone = item.ManagerPhone,
                 ManagerFax = item.ManagerFax,
+                ManagerTel = item.ManagerTel
 
             };
             return m;
@@ -58,6 +59,7 @@ namespace BL.Services
                 ManagerName = item.ManagerName,
                 ManagerPhone = item.ManagerPhone,
                 ManagerFax = item.ManagerFax,
+                ManagerTel = item.ManagerTel
 
             };
             return m;

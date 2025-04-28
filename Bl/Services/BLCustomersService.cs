@@ -72,9 +72,7 @@ namespace BL.Services
         public List<BlCustomer> Get()
         {
             var cList = dal.Customer.GetAll();
-            List<BlCustomer> list = new();
-            cList.ForEach(c => list.Add(fromDalToBl(c)));
-            return list;
+            return listFromDalToBl(cList);
         }
 
         public BlCustomer GetById(int id)
