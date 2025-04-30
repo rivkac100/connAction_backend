@@ -37,11 +37,11 @@ public partial class dbcontext : DbContext
     {
         modelBuilder.Entity<Activity>(entity =>
         {
-            entity.HasKey(e => e.ActivityId).HasName("PK__tmp_ms_x__0FC9CBECA397F4FE");
+            entity.HasKey(e => e.ActivityId).HasName("PK__Activiti__0FC9CBEC290869C7");
 
             entity.Property(e => e.ActivityId).HasColumnName("activityId");
             entity.Property(e => e.ActivityDescription)
-                .HasMaxLength(10)
+                .HasMaxLength(100)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("activityDescription");
             entity.Property(e => e.LenOfActivity).HasColumnName("lenOfActivity");
@@ -49,8 +49,14 @@ public partial class dbcontext : DbContext
                 .HasMaxLength(100)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("location");
+            entity.Property(e => e.ManagerId).HasColumnName("managerId");
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
+
+            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>
@@ -177,11 +183,6 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.Payment)
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("payment");
-
-            entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
-                .HasForeignKey(d => d.ActivityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Orders_ToTable_2 (activityId)");
 
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)
