@@ -19,6 +19,6 @@ namespace BL.Models
         public int ManagerId { get; set; }
 
         public virtual Manager Manager { get; set; } = null!;
-        public  List<BlOrder> Orders { get; set; } = new List<BlOrder>();
+        public List<BlOrder> Orders { get; set; } = new List<BlOrder>();
     }
 }
