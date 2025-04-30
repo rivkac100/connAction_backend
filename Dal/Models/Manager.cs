@@ -1,6 +1,4 @@
-﻿//בס"ד
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Dal.Models;
@@ -18,4 +16,6 @@ public partial class Manager
     public string ManagerFax { get; set; } = null!;
 
     public string ManagerTel { get; set; } = null!;
+
+    public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
 }
