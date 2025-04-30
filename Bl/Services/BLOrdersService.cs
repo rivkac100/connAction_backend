@@ -8,53 +8,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BL.Services
 {
     public class BLOrdersService : IBlOrder
     {
         IDal dal;
-        public BLOrdersService(IDal dal)
+        IBlActivity activity;
+        public BLOrdersService(IDal dal,IBlActivity activity)
         {
             this.dal = dal;
+            this.activity = activity;
+
         }
-        public void Create(BlOrder item)
-        {
+        public void Create(BlOrder item)=>
             dal.Order.Create(fromBlToDal(item));
-        }
 
-        public void Delete(int id)
-        {
+
+        public void Delete(int id)=>
             dal.Order.Delete(id);
-        }
 
-        public List<BlOrder> Get()
-        {
-            var oList = dal.Order.GetAll();
-            
-            return listFromDalToBl(oList);
-        }
 
-        public List<BlOrder> GetByCustomerId(int customerId)
-        {
-           return Get().FindAll(x=>x.CustomerId==customerId).ToList();
-        }
+        public List<BlOrder> Get()=>
+           listFromDalToBl(dal.Order.GetAll());
 
-        public BlOrder GetById(int id)
-        {
-            Order o = dal.Order.GetById(id);
-            return fromDalToBl(o);
-        }
-        public List<BlOrder> GetByDate(DateOnly date)
-        {
-            List<Order> o = dal.Order.GetByDate(date);
-            return listFromDalToBl(o);
-        }
 
-        public void Update(BlOrder item)
-        {
+        public List<BlOrder> GetByCustomerId(int customerId)=>
+        Get().FindAll(x=>x.CustomerId==customerId).ToList();
+
+
+        public BlOrder GetById(int id)=>
+            fromDalToBl(dal.Order.GetById(id));
+        public List<BlOrder> GetByDate(DateOnly date)=>
+            listFromDalToBl(dal.Order.GetByDate(date));
+
+
+        public void Update(BlOrder item)=>
             dal.Order.Update(fromBlToDal(item));
-        }
+
 
         public BlOrder fromDalToBl(Order item)
         {
@@ -69,6 +61,8 @@ namespace BL.Services
             order.CustomerName = item.Customer?.InstituteName;
             order.ActivityName = item.Activity?.ActivityDescription;
             order.Payment = item.Payment;
+            order.ActivityPrice = item.Activity.Price;
+            order.ActivityNightPrice=item.Activity.NightPrice;
             order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
             order.Date = DateOnly.FromDateTime( item.Date);
             return order;
@@ -81,9 +75,9 @@ namespace BL.Services
                 BrokerId = item.BrokerId,
                 CustomerId = item.CustomerId,
                 ActivityId = item.ActivityId,
-                AmountOfParticipants = item.AmountOfParticipants,
+                AmountOfParticipants = item.AmountOfParticipants, 
                 Date =new DateTime( item.Date.Year, item.Date.Month, item.Date.Day, item.ActiveHour.Hour, item.ActiveHour.Minute, item.ActiveHour.Second),
-                Payment = item.Payment,
+                Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? item.ActivityNightPrice*item.AmountOfParticipants: item.ActivityPrice * item.AmountOfParticipants,
                 
             };
 

@@ -20,4 +20,6 @@ public partial class Activity
     public int ManagerId { get; set; }
 
     public virtual Manager Manager { get; set; } = null!;
+    public List<Order> Orders { get; set; } = new List<Order>();
+
 }

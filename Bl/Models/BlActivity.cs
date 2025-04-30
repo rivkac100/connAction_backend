@@ -16,7 +16,9 @@ namespace BL.Models
         public int Price { get; set; }
 
         public int NightPrice { get; set; }
+        public int ManagerId { get; set; }
 
-        public  ICollection<BlOrder> Orders { get; set; } = new List<BlOrder>();
+        public virtual Manager Manager { get; set; } = null!;
+        public  List<BlOrder> Orders { get; set; } = new List<BlOrder>();
     }
 }
