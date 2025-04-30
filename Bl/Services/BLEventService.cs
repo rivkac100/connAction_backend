@@ -20,7 +20,7 @@ namespace BL.Services
         }
         public void Create(BlEvent item)
         {
-        dal.Event.Create(toEvent(item));
+        dal.Event.Create(fromBlToDal(item));
 
         }
 
@@ -33,7 +33,7 @@ namespace BL.Services
         {
             var eList = dal.Event.GetAll();
             List<BlEvent> list = new();
-            eList.ForEach(e => list.Add(toBlEvent(e)));
+            eList.ForEach(e => list.Add(fromDalToBl(e)));
             return list;
         }
 
@@ -41,35 +41,49 @@ namespace BL.Services
         {
 
             Event e = dal.Event.GetById(id);
-                return toBlEvent(e);
+                return fromDalToBl(e);
     }
+
+        public List<Event> listFromBlToDal(List<BlEvent> item)
+        {
+           List<Event> list = new List<Event>();
+            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            return list;
+        }
+
+        public List<BlEvent> listFromDalToBl(List<Event> item)
+        {
+            List<BlEvent> list = new List<BlEvent>();
+            item.ForEach(x => list.Add(fromDalToBl(x)));
+            return list;
+        }
 
         public void Update(BlEvent item)
         {
-            dal.Event.Update(toEvent(item));
+            dal.Event.Update(fromBlToDal(item));
         }
-        private BlEvent toBlEvent(Event e)
+        public BlEvent fromDalToBl(Event item)
         {   
-            if(e!=null) { 
+            if(item!=null) { 
             BlEvent evnt = new();
-            evnt.Id = e.Id;
-            evnt.Time = TimeOnly.FromDateTime(e.Date);//new TimeSpan(e.Date.TimeOfDay.Hours, e.Date.TimeOfDay.Minutes, e.Date.TimeOfDay.Seconds);
-            evnt.Date = DateOnly.FromDateTime(e.Date);
-            evnt.Description = e.Description;
-            evnt.Title = e.Title;
-            evnt.LenOfEvent = e.LenOfEvent;
+            evnt.Id = item.Id;
+            evnt.Time = TimeOnly.FromDateTime(item.Date);//new TimeSpan(e.Date.TimeOfDay.Hours, e.Date.TimeOfDay.Minutes, e.Date.TimeOfDay.Seconds);
+            evnt.Date = DateOnly.FromDateTime(item.Date);
+            evnt.Description = item.Description;
+            evnt.Title = item.Title;
+            evnt.LenOfEvent = item.LenOfEvent;
             return evnt;
             }
             return null;
         }
-        private Event toEvent(BlEvent e)
+        public Event fromBlToDal(BlEvent item)
         {
             Event evnt = new ();
-            evnt.Id = e.Id;
-            evnt.Title = e.Title;
-            evnt.Description = e.Description;
-            evnt.LenOfEvent= e.LenOfEvent;
-            evnt.Date =new DateTime(e.Date.Year, e.Date.Month, e.Date.Day, e.Time.Hour, e.Time.Minute,e.Time.Second);
+            evnt.Id = item.Id;
+            evnt.Title = item.Title;
+            evnt.Description = item.Description;
+            evnt.LenOfEvent= item.LenOfEvent;
+            evnt.Date =new DateTime(item.Date.Year, item.Date.Month, item.Date.Day, item.Time.Hour, item.Time.Minute,item.Time.Second);
             return evnt;
         }
     }

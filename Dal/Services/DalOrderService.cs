@@ -21,14 +21,29 @@ namespace Dal.Services
         public void Create(Order entity)
         {
             dbcontext.Orders.Add(entity);
-            dbcontext.SaveChanges();
+            try
+            {
+                dbcontext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("cant save changes ");
+
+            }
         }
 
         public void Delete(int id)
         {
             var olist = GetAll();
             dbcontext.Remove(olist.Find(x => x.OrderId == id));
+            try { 
             dbcontext.SaveChanges();
+            }
+            catch(Exception ex) {
+                throw new Exception("cant save changes ");
+                    
+            }
+            
         }
 
         public List<Order> GetAll()
@@ -40,12 +55,15 @@ namespace Dal.Services
         {
             return GetAll().Find(x=>x.OrderId==id);
         }
-
+        public List<Order>? GetByDate(DateOnly date)
+        {
+            return GetAll().FindAll(x => DateOnly.FromDateTime(x.Date)  == date).ToList();
+        }
         //public List<Order> GetByorderId(int orderId)
         //{
         //    return dbcontext.Orders.ToList().FindAll(x => x.orderId == orderId);
         //}
-      
+
         /// <summary> 
         ///update order in data base
         /// </summary>

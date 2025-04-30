@@ -12,3 +12,17 @@ D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\refin
 D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.pdb
 D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\ref\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll

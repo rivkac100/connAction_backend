@@ -19,21 +19,8 @@ namespace BL.Services
         }
         public void Create(BlCustomer customer)
         {
-            Customer c = new Customer()
-            {
-                //InstituteId = customer.InstituteId,
-                InstituteName = customer.InstituteName,
-                Fax = customer.Fax,
-                Mobile = customer.Mobile,
-                Email = customer.Email,
-                ContactName = customer.ContactName,
-                ContactPhone = customer.ContactPhone,
-                City = customer.City,
-                Community = customer.Community,
-                Amount = customer.Amount,
-                Due = customer.Due
-            };
-            dal.Customer.Create(c);
+      
+            dal.Customer.Create(fromBlToDal(customer));
         }
 
         public void Delete(int id)
@@ -42,41 +29,76 @@ namespace BL.Services
             dal.Customer.Delete(id);
         }
 
+        public Customer fromBlToDal(BlCustomer item)
+        {
+            Customer c = new Customer()
+            {
+                InstituteId = item.InstituteId,
+                InstituteName = item.InstituteName,
+                Fax = item.Fax,
+                Mobile = item.Mobile,
+                Email = item.Email,
+                ContactName = item.ContactName,
+                ContactPhone = item.ContactPhone,
+                City = item.City,
+                Community = item.Community,
+                Amount = item.Amount,
+                Due = item.Due,
+                Orders =order.listFromBlToDal(item.Orders.ToList())
+            };
+            return c;
+        }
+
+        public BlCustomer fromDalToBl(Customer item)
+        {
+            BlCustomer c = new BlCustomer()
+            {
+                InstituteId = item.InstituteId,
+                InstituteName = item.InstituteName,
+                Fax = item.Fax,
+                Mobile = item.Mobile,
+                Email = item.Email,
+                ContactName = item.ContactName,
+                ContactPhone = item.ContactPhone,
+                City = item.City,
+                Community = item.Community,
+                Amount = item.Amount,
+                Due = item.Due,
+                Orders= order.listFromDalToBl(item.Orders.ToList())
+            };
+            return c;
+        }
+
         public List<BlCustomer> Get()
         {
             var cList = dal.Customer.GetAll();
-            List<BlCustomer> list = new();
-            cList.ForEach(c => list.Add(new BlCustomer(c.InstituteName, c.Mobile, c.Email, c.ContactName, c.ContactPhone, c.Community)
-            { InstituteId = c.InstituteId, Fax = c.Fax, Amount = c.Amount,City=c.City, Due = c.Due,Orders=order.ListToBl(c.Orders.ToList()) }));
-            return list;
+            return listFromDalToBl(cList);
         }
 
         public BlCustomer GetById(int id)
         {
             Customer c = dal.Customer.GetById(id);
-            BlCustomer customer = new(c.InstituteName, c.Mobile, c.Email, c.ContactName, c.ContactPhone, c.Community)
-            { InstituteId = c.InstituteId, Fax = c.Fax, City = c.City, Amount = c.Amount, Due = c.Due, Orders = order.ListToBl(c.Orders.ToList()) };
-            return customer;
+            return fromDalToBl(c);
 
+        }
+
+        public List<Customer> listFromBlToDal(List<BlCustomer> item)
+        {
+            List<Customer> list = new();    
+            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            return list;
+        }
+
+        public List<BlCustomer> listFromDalToBl(List<Customer> item)
+        {
+            List<BlCustomer> list = new();
+            item.ForEach(x => list.Add(fromDalToBl(x)));
+            return list;
         }
 
         public void Update(BlCustomer customer)
         {
-            Customer c = new Customer()
-            {
-                InstituteId = customer.InstituteId,
-                InstituteName = customer.InstituteName,
-                Fax = customer.Fax,
-                Mobile = customer.Mobile,
-                Email = customer.Email,
-                ContactName = customer.ContactName,
-                ContactPhone = customer.ContactPhone,
-                City = customer.City,
-                Community = customer.Community,
-                Amount = customer.Amount,
-                Due = customer.Due
-            };
-            dal.Customer.Update(c);
+            dal.Customer.Update(fromBlToDal(customer));
         }
     }
 }

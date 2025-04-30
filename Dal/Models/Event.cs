@@ -1,6 +1,4 @@
-﻿//בס"ד
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Dal.Models;

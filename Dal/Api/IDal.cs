@@ -15,5 +15,6 @@ namespace Dal.Api
         public IDalTask Task { get; }
         public IDalActivity Activity { get; }
         public IDalEvent Event { get; }
+        public IDalManager Manager { get; }
     }
 }

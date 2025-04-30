@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL.Api
 {
-    public interface IBlTask:IBlCrud<Models.BlTask>
+    public interface IBlTask:IBlCrud<Models.BlTask,Dal.Models.Task>
     {
     }
 }

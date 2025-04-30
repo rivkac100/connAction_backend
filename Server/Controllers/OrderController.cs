@@ -38,6 +38,19 @@ namespace Server.Controllers
             }
             return Ok(orders.GetById(id));
         }
+        [HttpGet("GetByDate/{date}")]
+        public IActionResult Get(DateOnly date)
+        {
+            if (date ==null)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (date.Year<2000)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(orders.GetByDate(date));
+        }
         [HttpGet("GetByCustomerId/{customerId}")]
         public IActionResult GetByCustomerId(int customerId)
         {

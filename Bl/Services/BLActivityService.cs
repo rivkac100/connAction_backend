@@ -24,63 +24,72 @@ namespace BL.Services
             this.order = order;
             
         }
-        public void Create(BlActivity item)
-        {
-            dal.Activity.Create(toActiv(item));
-        }
+        public void Create(BlActivity item)=>
+            dal.Activity.Create(fromBlToDal(item));
 
-        public void Delete(int id)
-        {
+
+        public void Delete(int id)=>
             dal.Activity.Delete(id);
-        }
 
-        public List<BlActivity> Get()
-        {
-            var aList = dal.Activity.GetAll();
-            List<BlActivity> list = new();
-            aList.ForEach(c => list.Add(
-                new BlActivity { ActivityId = c.ActivityId, ActivityDescription = c.ActivityDescription, Location = c.Location, NightPrice = c.NightPrice, Price = c.Price,
-                    Orders = order.ListToBl(c.Orders.ToList())
-                }
-            ));
-            return list;
-        }
-        public BlActivity GetById(int id)
-        {
-           Dal.Models.Activity a = dal.Activity.GetById(id);
-            BlActivity activity = new BlActivity { ActivityId = a.ActivityId, ActivityDescription = a.ActivityDescription, Location = a.Location, Price = a.Price, NightPrice = a.NightPrice,
-                Orders = order.ListToBl(a.Orders.ToList())
-            };
-            return activity;
-        }
 
-        public void Update(BlActivity item)
-        {
-            dal.Activity.Update(toActiv(item));
-        }
+        public List<BlActivity> Get()=>
+            listFromDalToBl(dal.Activity.GetAll());
+
+        public BlActivity GetById(int id)=>
+         fromDalToBl(dal.Activity.GetById(id));
+       
+
+        public void Update(BlActivity item)=>      
+            dal.Activity.Update(fromBlToDal(item));
         
-        public Dal.Models.Activity toActiv(BlActivity item)
+        
+       
+       
+
+        public BlActivity fromDalToBl(Dal.Models.Activity item)
         {
-            Dal.Models.Activity a = new ();
+            BlActivity a = new BlActivity();
             a.ActivityId = item.ActivityId;
             a.ActivityDescription = item.ActivityDescription;
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
             a.Location = item.Location;
+            a.ManagerId = item.ManagerId;
+            a.Manager=item.Manager;
+            a.Orders = order.listFromDalToBl(item.Orders);
             return a;
         }
-        public BlActivity toBlActiv(Dal.Models.Activity item) {
-            BlActivity a = new BlActivity();
-           // a.ActivityId = item.ActivityId;
+
+        public Dal.Models.Activity fromBlToDal(BlActivity item)
+        {
+            Dal.Models.Activity a = new();
+            a.ActivityId = item.ActivityId;
             a.ActivityDescription = item.ActivityDescription;
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
             a.Location = item.Location;
+            a.Manager = item.Manager;
+            a.ManagerId = item.ManagerId;
+            a.Manager = item.Manager;
+            a.Orders =order.listFromBlToDal(item.Orders);
             return a;
         }
 
+      
 
+        public List<BlActivity> listFromDalToBl(List<Dal.Models.Activity> item)
+        {
+            List<BlActivity> ls= new List<BlActivity>();    
+            item.ForEach(x=>ls.Add(fromDalToBl(x)));
+            return ls;
+        }
 
-
+        public List<Dal.Models.Activity> listFromBlToDal(List<BlActivity> item)
+        {
+            List<Dal.Models.Activity> ls = new List<Dal.Models.Activity>();
+            item.ForEach(x => ls.Add(fromBlToDal(x)));
+            return ls;
+        }
+      
     }
 } 
