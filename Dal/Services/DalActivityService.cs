@@ -26,9 +26,18 @@ namespace Dal.Services
         {
             var alist = dbcontext.Activities.ToList();
             var olist = dbcontext.Orders.ToList();
-            dbcontext.Orders.Remove(olist.Find(x => x.ActivityId == id));
-            dbcontext.Activities.Remove(alist.Find(x => x.ActivityId == id));
-            dbcontext?.SaveChanges();
+            if (olist.Find(x => x.CustomerId == id) != null)
+                dbcontext.Orders.Remove(olist.Find(x => x.ActivityId == id));
+            if (alist.Find(x => x.ActivityId == id) != null)
+                dbcontext.Activities.Remove(alist.Find(x => x.ActivityId == id));
+            try
+            {
+                dbcontext?.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("cant save chenges -customer");
+            };
         }
 
         public List<Activity> GetAll()
