@@ -55,7 +55,7 @@ namespace BL.Services
             a.Price = item.Price;
             a.Location = item.Location;
             a.ManagerId = item.ManagerId;
-            a.Manager=item.Manager;
+            //a.Manager=item.Manager;
             a.Orders = order.listFromDalToBl(item.Orders);
             return a;
         }
@@ -68,9 +68,8 @@ namespace BL.Services
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
             a.Location = item.Location;
-            a.Manager = item.Manager;
+            //a.Manager = item.Manager;
             a.ManagerId = item.ManagerId;
-            a.Manager = item.Manager;
             a.Orders =order.listFromBlToDal(item.Orders);
             return a;
         }
