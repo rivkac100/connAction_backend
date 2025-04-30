@@ -90,9 +90,6 @@ namespace BL.Services
             item.ForEach(x => ls.Add(fromBlToDal(x)));
             return ls;
         }
-        public int getPriceByIdActivity(BlActivity)
-        {
-            
-        }
+      
     }
 } 
