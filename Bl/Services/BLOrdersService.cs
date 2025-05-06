@@ -5,6 +5,7 @@ using Dal.Api;
 using Dal.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,11 @@ namespace BL.Services
     public class BLOrdersService : IBlOrder
     {
         IDal dal;
-        IBlActivity activity;
-        public BLOrdersService(IDal dal,IBlActivity activity)
+       
+        public BLOrdersService(IDal dal)
         {
             this.dal = dal;
-            this.activity = activity;
+   
 
         }
         public void Create(BlOrder item)=>
@@ -50,7 +51,7 @@ namespace BL.Services
 
         public BlOrder fromDalToBl(Order item)
         {
-
+            var activ =dal.Activity.GetById(item.ActivityId);
             BlOrder order = new();
             order.OrderId = item.OrderId;
             order.CustomerId = item.CustomerId;
@@ -59,16 +60,19 @@ namespace BL.Services
             order.BrokerId = item.BrokerId;
             order.BrokerName = item.Broker?.BrokerName;
             order.CustomerName = item.Customer?.InstituteName;
-            order.ActivityName = item.Activity?.ActivityDescription;
+            //order.ActivityName = item.Activity?.ActivityDescription;
             order.Payment = item.Payment;
-            order.ActivityPrice = item.Activity.Price;
-            order.ActivityNightPrice=item.Activity.NightPrice;
+            //order.ActivityPrice = item.Activity.Price;
+            //order.ActivityNightPrice=item.Activity.NightPrice;
             order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
             order.Date = DateOnly.FromDateTime( item.Date);
+            order.ActivityName = activ.ActivityDescription;
             return order;
         }
         public Order fromBlToDal(BlOrder item)
         {
+            var activ = dal.Activity.GetById(item.ActivityId);
+
             Order order = new Order
             {
                 OrderId = item.OrderId,
@@ -77,7 +81,7 @@ namespace BL.Services
                 ActivityId = item.ActivityId,
                 AmountOfParticipants = item.AmountOfParticipants, 
                 Date =new DateTime( item.Date.Year, item.Date.Month, item.Date.Day, item.ActiveHour.Hour, item.ActiveHour.Minute, item.ActiveHour.Second),
-                Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? item.ActivityNightPrice*item.AmountOfParticipants: item.ActivityPrice * item.AmountOfParticipants,
+                Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? activ.NightPrice*item.AmountOfParticipants: activ.Price * item.AmountOfParticipants,
                 
             };
 

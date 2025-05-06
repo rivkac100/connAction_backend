@@ -26,8 +26,8 @@ namespace BL.Models
         public TimeOnly ActiveHour { get; set; }
 
         public int ActivityId { get; set; }
-        public int  ActivityPrice { get; set; } 
-        public int ActivityNightPrice { get; set; } 
+        //public int  ActivityPrice { get; set; } 
+        //public int ActivityNightPrice { get; set; } 
         public string? ActivityName { get; set; }
 
 

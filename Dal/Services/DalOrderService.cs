@@ -48,7 +48,7 @@ namespace Dal.Services
 
         public List<Order> GetAll()
         {
-            return dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).Include(o=> o.Activity).ToList();   
+            return dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).ToList();   
         }
 
         public Order? GetById(int id)
