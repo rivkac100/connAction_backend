@@ -17,8 +17,8 @@ namespace BL.Models
 
         public int NightPrice { get; set; }
         public int ManagerId { get; set; }
-
-        public virtual Manager Manager { get; set; } = null!;
-        public  List<BlOrder> Orders { get; set; } = new List<BlOrder>();
+        public double lenOfActivity { get; set; }
+        //public virtual Manager Manager { get; set; } = null!;
+        public List<BlOrder> Orders { get; set; } = new List<BlOrder>();
     }
 }
