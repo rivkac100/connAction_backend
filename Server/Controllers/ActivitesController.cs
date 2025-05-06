@@ -40,19 +40,7 @@ namespace Server.Controllers
             }
             return Ok(activity.GetById(id));
         }
-        [HttpGet("GetByManagerId/{id}")]
-        public IActionResult GetByManagerId(int id)
-        {
-            if (id == 0)
-            {
-                return NotFound("Not Found Id");
-            }
-            if (id < 0)
-            {
-                return BadRequest("Invalid Id");
-            }
-            return Ok(activity.GetActivitiesByManagerId(id));
-        }
+  
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {

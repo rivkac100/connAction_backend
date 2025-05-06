@@ -37,6 +37,45 @@ namespace Server.Controllers
             }
             return Ok(manager.GetById(id));
         }
+        [HttpGet("GetCustomersById/{id}")]
+        public IActionResult GetCustomersByManagerId(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (id < 0)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(manager.GetCustomersByManagerId(id));
+        }
+        [HttpGet("GetOrdersById/{id}")]
+        public IActionResult GetOrdrsByManagerId(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (id < 0)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(manager.GetOrdersByManagerId(id));
+        }
+        [HttpGet("GetActivitiesById/{id}")]
+        public IActionResult GetActivitiesByManagerId(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (id < 0)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(manager.GetActivitiesByManagerId(id));
+        }
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {

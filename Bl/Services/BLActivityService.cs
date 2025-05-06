@@ -46,35 +46,41 @@ namespace BL.Services
        
        
 
-        public BlActivity fromDalToBl(Dal.Models.Activity item)
-        {
-            BlActivity a = new BlActivity();
-            a.ActivityId = item.ActivityId;
-            a.lenOfActivity = item.LenOfActivity;
-            a.ActivityDescription = item.ActivityDescription;
-            a.NightPrice = item.NightPrice;
-            a.Price = item.Price;
-            a.Location = item.Location;
-            a.ManagerId = item.ManagerId;
-            //a.Manager=item.Manager;
-            a.Orders = order.listFromDalToBl(item.Orders);
-            return a;
-        }
+        public BlActivity fromDalToBl(Dal.Models.Activity item)=>
+            new BlActivity() {
+              
+                ActivityId = item.ActivityId,
+                ActivityName = item.ActivityName,
+                ActivityDescription = item.ActivityDescription,
+                NightPrice = item.NightPrice,
+                Price = item.Price,
+                Location = item.Location,
+                LenOfActivity = item.LenOfActivity,
+                //a.Manager = item.Manager;
+                ManagerId = item.ManagerId,
+                ImgPath = item.ImgPath,
+                Orders = order.listFromDalToBl(item.Orders.ToList())
+            };
+            
 
-        public Dal.Models.Activity fromBlToDal(BlActivity item)
-        {
-            Dal.Models.Activity a = new();
-            a.ActivityId = item.ActivityId;
-            a.ActivityDescription = item.ActivityDescription;
-            a.NightPrice = item.NightPrice;
-            a.Price = item.Price;
-            a.Location = item.Location;
-            a.LenOfActivity = item.lenOfActivity;
-            //a.Manager = item.Manager;
-            a.ManagerId = item.ManagerId;
-            a.Orders =order.listFromBlToDal(item.Orders);
-            return a;
-        }
+
+        public Dal.Models.Activity fromBlToDal(BlActivity item)=>
+             new()
+            {
+                ActivityId = item.ActivityId,
+                ActivityName = item.ActivityName,
+                ActivityDescription = item.ActivityDescription,
+                NightPrice = item.NightPrice,
+                Price = item.Price,
+                Location = item.Location,
+                LenOfActivity = item.LenOfActivity,
+                //a.Manager = item.Manager;
+                ManagerId = item.ManagerId,
+                ImgPath = item.ImgPath,
+                Orders = order.listFromBlToDal(item.Orders)
+            };
+         
+       
 
       
 
@@ -92,15 +98,7 @@ namespace BL.Services
             return ls;
         }
 
-        public List<BlActivity> GetActivitiesByManagerId(int managerId)=>
-                 Get().FindAll(x=>x.ManagerId == managerId).ToList();
-        public List <BlOrder> getOrdersByManagerId(int managerId)
-        {
-            List<BlOrder> ls = new();
-                GetActivitiesByManagerId(managerId).ForEach(x=>
-                ls.AddRange(order.GetByActivityId(x.ActivityId)));
-            return ls;
-        }
-
+        
+    
     }
 } 

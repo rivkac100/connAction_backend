@@ -61,10 +61,10 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
 
-            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
-                .HasForeignKey(d => d.ManagerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Activities");
+            //entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+            //    .HasForeignKey(d => d.ManagerId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>

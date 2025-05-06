@@ -6,8 +6,7 @@ namespace Dal.Models;
 public partial class Activity
 {
     public int ActivityId { get; set; }
-
-    public string ActivityName { get; set; } = null!;
+    public string ActivityName { get; set; }
 
     public string ActivityDescription { get; set; } = null!;
 
@@ -21,7 +20,9 @@ public partial class Activity
 
     public int ManagerId { get; set; }
 
-    public string? ImgPath { get; set; }
+    public string ImgPath { get; set; }
+    //public Manager Manager { get; set; }
+    //public virtual Manager Manager { get; set; } = null!;
+    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
-    public virtual Manager Manager { get; set; } = null!;
 }
