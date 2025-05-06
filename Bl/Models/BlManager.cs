@@ -21,5 +21,6 @@ namespace BL.Models
         public string ManagerFax { get; set; } = null!;
 
         public string ManagerTel { get; set; } = null!;
+        public virtual ICollection<BlActivity> Activities { get; set; } = new List<BlActivity>();
     }
 }

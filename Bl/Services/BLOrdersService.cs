@@ -101,10 +101,9 @@ namespace BL.Services
             return orders;
         }
 
+        public List<BlOrder> GetByActivityId( int activityId)=>
+            Get().FindAll(x=>x.ActivityId==activityId).ToList();
         
-
-       
-       
 
     }
 }

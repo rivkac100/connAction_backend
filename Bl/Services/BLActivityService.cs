@@ -50,6 +50,7 @@ namespace BL.Services
         {
             BlActivity a = new BlActivity();
             a.ActivityId = item.ActivityId;
+            a.lenOfActivity = item.LenOfActivity;
             a.ActivityDescription = item.ActivityDescription;
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
@@ -68,6 +69,7 @@ namespace BL.Services
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
             a.Location = item.Location;
+            a.LenOfActivity = item.lenOfActivity;
             //a.Manager = item.Manager;
             a.ManagerId = item.ManagerId;
             a.Orders =order.listFromBlToDal(item.Orders);
@@ -89,6 +91,16 @@ namespace BL.Services
             item.ForEach(x => ls.Add(fromBlToDal(x)));
             return ls;
         }
-      
+
+        public List<BlActivity> GetActivitiesByManagerId(int managerId)=>
+                 Get().FindAll(x=>x.ManagerId == managerId).ToList();
+        public List <BlOrder> getOrdersByManagerId(int managerId)
+        {
+            List<BlOrder> ls = new();
+                GetActivitiesByManagerId(managerId).ForEach(x=>
+                ls.AddRange(order.GetByActivityId(x.ActivityId)));
+            return ls;
+        }
+
     }
 } 
