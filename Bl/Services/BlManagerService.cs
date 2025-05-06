@@ -16,11 +16,11 @@ namespace BL.Services
     public class BlManagerService : IBlManager
     {
         IDal dal;
-        //IBlOrder order;
-        public BlManagerService(IDal dal)
+        IBlActivity activity;
+        public BlManagerService(IDal dal,IBlActivity activity)
         {
             this.dal = dal;
-            //this.order = order;
+            this.activity = activity;
         }
         public void Create(BlManager item)
         {
@@ -59,8 +59,8 @@ namespace BL.Services
                 ManagerName = item.ManagerName,
                 ManagerPhone = item.ManagerPhone,
                 ManagerFax = item.ManagerFax,
-                ManagerTel = item.ManagerTel
-
+                ManagerTel = item.ManagerTel,
+                Activities= activity.listFromDalToBl(item.Activities.ToList()).ToList()
             };
             return m;
         }

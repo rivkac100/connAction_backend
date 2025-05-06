@@ -91,6 +91,16 @@ namespace BL.Services
             item.ForEach(x => ls.Add(fromBlToDal(x)));
             return ls;
         }
-      
+
+        public List<BlActivity> GetActivitiesByManagerId(int managerId)=>
+                 Get().FindAll(x=>x.ManagerId == managerId).ToList();
+        public List <BlOrder> getOrdersByManagerId(int managerId)
+        {
+            List<BlOrder> ls = new();
+                GetActivitiesByManagerId(managerId).ForEach(x=>
+                ls.AddRange(order.GetByActivityId(x.ActivityId)));
+            return ls;
+        }
+
     }
 } 

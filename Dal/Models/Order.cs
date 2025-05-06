@@ -22,6 +22,4 @@ public partial class Order
     public virtual Broker? Broker { get; set; }
 
     public virtual Customer Customer { get; set; } = null!;
-   // public virtual Activity Activity { get; set; } = null!;
-
 }
