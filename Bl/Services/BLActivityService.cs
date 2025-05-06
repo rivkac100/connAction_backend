@@ -50,6 +50,7 @@ namespace BL.Services
         {
             BlActivity a = new BlActivity();
             a.ActivityId = item.ActivityId;
+            a.lenOfActivity = item.LenOfActivity;
             a.ActivityDescription = item.ActivityDescription;
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
@@ -68,6 +69,7 @@ namespace BL.Services
             a.NightPrice = item.NightPrice;
             a.Price = item.Price;
             a.Location = item.Location;
+            a.LenOfActivity = item.lenOfActivity;
             //a.Manager = item.Manager;
             a.ManagerId = item.ManagerId;
             a.Orders =order.listFromBlToDal(item.Orders);
