@@ -1,5 +1,6 @@
 ﻿//בס"ד
 
+using BL.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,5 +12,6 @@ namespace BL.Api
 {
     public interface IBlActivity: IBlCrud<BL.Models.BlActivity,Dal.Models.Activity>
     {
+        List<BlActivity> GetActivitiesByManagerId(int managerId);
     }
 }
