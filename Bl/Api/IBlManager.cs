@@ -12,7 +12,7 @@ namespace BL.Api
 {
     public interface IBlManager:IBlCrud<BlManager,Manager>
     {
-        List<BlActivity> GetActivitiesByManagerId(int managerId);
+        public List<BlActivity> GetActivitiesByManagerId(int managerId);
 
         public List<BlCustomer> GetCustomersByManagerId(int managerId);
         public List<BlOrder> GetOrdersByManagerId(int managerId);
