@@ -40,6 +40,7 @@ namespace Server.Controllers
             }
             return Ok(activity.GetById(id));
         }
+  
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {

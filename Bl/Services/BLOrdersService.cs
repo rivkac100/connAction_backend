@@ -66,7 +66,7 @@ namespace BL.Services
             //order.ActivityNightPrice=item.Activity.NightPrice;
             order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
             order.Date = DateOnly.FromDateTime( item.Date);
-            order.ActivityName = activ.ActivityDescription;
+            order.ActivityName =activ==null? activ?.ActivityName :null;
             return order;
         }
         public Order fromBlToDal(BlOrder item)
@@ -101,10 +101,9 @@ namespace BL.Services
             return orders;
         }
 
+        public List<BlOrder> GetByActivityId( int activityId)=>
+            Get().FindAll(x=>x.ActivityId==activityId).ToList();
         
-
-       
-       
 
     }
 }

@@ -31,19 +31,27 @@ public partial class dbcontext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\תיקייה כללית חדש\\שנה ב תשפה\\קבוצה א\\תלמידות\\0000000000000000000000חוי וגיטי\\database\\db2.mdf;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\תיקייה כללית חדש\\שנה ב תשפה\\קבוצה א\\תלמידות\\0000000000000000000000חוי וגיטי\\database\\db2.mdf;Integrated Security=True;Connect Timeout=30;Column Encryption Setting=Enabled");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Activity>(entity =>
         {
-            entity.HasKey(e => e.ActivityId).HasName("PK__Activiti__0FC9CBEC290869C7");
+            entity.HasKey(e => e.ActivityId).HasName("PK__tmp_ms_x__0FC9CBECFB015D43");
 
             entity.Property(e => e.ActivityId).HasColumnName("activityId");
             entity.Property(e => e.ActivityDescription)
-                .HasMaxLength(100)
+                .HasMaxLength(250)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("activityDescription");
+            entity.Property(e => e.ActivityName)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("activityName");
+            entity.Property(e => e.ImgPath)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("imgPath");
             entity.Property(e => e.LenOfActivity).HasColumnName("lenOfActivity");
             entity.Property(e => e.Location)
                 .HasMaxLength(100)
@@ -144,8 +152,41 @@ public partial class dbcontext : DbContext
 
         modelBuilder.Entity<Manager>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Managers__3214EC07EF89005F");
+            entity.HasKey(e => e.Id).HasName("PK__managers__3214EC0705210E12");
 
+            entity.ToTable("managers");
+
+            entity.Property(e => e.AccountNum).HasColumnName("accountNum");
+            entity.Property(e => e.Address)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("address");
+            entity.Property(e => e.Bank)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("bank");
+            entity.Property(e => e.BankBranch).HasColumnName("bankBranch");
+            entity.Property(e => e.City)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("city");
+            entity.Property(e => e.CompName)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("compName");
+            entity.Property(e => e.Description)
+                .HasMaxLength(1000)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("description");
+            entity.Property(e => e.ImgPath)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("imgPath");
+            entity.Property(e => e.Kategoty)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("kategoty");
+            entity.Property(e => e.MOrP).HasColumnName("mOrP");
             entity.Property(e => e.ManagerEmail)
                 .HasMaxLength(50)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
@@ -166,6 +207,8 @@ public partial class dbcontext : DbContext
                 .HasMaxLength(20)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("managerTel");
+            entity.Property(e => e.NumOfComp).HasColumnName("numOfComp");
+            entity.Property(e => e.Pass).HasColumnName("pass");
         });
 
         modelBuilder.Entity<Order>(entity =>

@@ -1,5 +1,6 @@
 ﻿using Dal.Api;
 using Dal.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace Dal.Services
 
         public List<Manager> GetAll()
         {
-            return dbcontext.Managers.ToList();
+            return dbcontext.Managers.Include(x=> x.Activities).ToList();
 
         }
 
