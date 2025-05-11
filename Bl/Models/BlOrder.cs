@@ -17,7 +17,7 @@ namespace BL.Models
         public int? BrokerId { get; set; }
         public string? BrokerName { get; set; }
 
-        public decimal Payment { get; set; }
+        public decimal? Payment { get; set; }
 
         public int AmountOfParticipants { get; set; }
 

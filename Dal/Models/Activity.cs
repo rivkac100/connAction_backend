@@ -7,6 +7,8 @@ public partial class Activity
 {
     public int ActivityId { get; set; }
 
+    public string ActivityName { get; set; } = null!;
+
     public string ActivityDescription { get; set; } = null!;
 
     public double LenOfActivity { get; set; }
@@ -19,7 +21,10 @@ public partial class Activity
 
     public int ManagerId { get; set; }
 
-    //public virtual Manager Manager { get; set; } = null!;
-    public List<Order> Orders { get; set; } = new List<Order>();
+    public string? ImgPath { get; set; }
+
+    public virtual Manager Manager { get; set; } = null!;
+    public virtual  ICollection<Order> Orders { get; set; } = new List<Order>();
+
 
 }

@@ -33,7 +33,7 @@ namespace BL.Services
         {
             Customer c = new Customer()
             {
-                InstituteId = item.InstituteId,
+                //InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
                 Fax = item.Fax,
                 Mobile = item.Mobile,
