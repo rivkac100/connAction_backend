@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "z8/jf/uVtfFHkS7UZKSCL97FvnwEOhJPQdCo8dr/ZzU=",
+  "Hash": "+vydEVlIUqGqjMbA5YcVsYG7+NkkPo6KcQ4bS6rNDDQ=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Server\\wwwroot",
+      "Source": "Server",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\58664aba.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/58664aba.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\58664aba.jpg"
+    },
+    {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a419091.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/5a419091.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\5a419091.jpg"
+    },
+    {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/b1844c61.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\b1844c61.jpg"
+    }
+  ]
 }

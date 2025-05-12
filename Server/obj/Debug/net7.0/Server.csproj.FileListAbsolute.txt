@@ -238,3 +238,4 @@ D:\גיטי קאהן\bsd-c--c-g\Server\obj\Debug\net7.0\scopedcss\bundle\Server.
 D:\גיטי קאהן\bsd-c--c-g\Server\obj\Debug\net7.0\Server.csproj.CopyComplete
 D:\גיטי קאהן\bsd-c--c-g\Server\obj\Debug\net7.0\Server.genruntimeconfig.cache
 D:\גיטי קאהן\bsd-c--c-g\Server\obj\Debug\net7.0\ref\Server.dll
+D:\גיטי קאהן\bsd-c--c-g\Server\bin\Debug\net7.0\Server.staticwebassets.runtime.json
