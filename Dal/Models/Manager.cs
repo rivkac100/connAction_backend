@@ -42,6 +42,6 @@ public partial class Manager
     public string? ImgPath { get; set; }
 
     public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
-    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
 
+    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
 }

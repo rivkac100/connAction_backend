@@ -54,6 +54,7 @@ namespace Dal.Services
                 x.Description = entity.Description;       
                 x.Date = entity.Date;
                 x.LenOfEvent = entity.LenOfEvent;
+                x.ManagerId = entity.ManagerId;
                 // all file
                 dbcontext.SaveChanges();
             }

@@ -16,4 +16,6 @@ public partial class Event
     public int LenOfEvent { get; set; }
 
     public int ManagerId { get; set; }
+
+    
 }
