@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj": {}
+    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj": {
+    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj",
+        "projectUniqueName": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj",
+        "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\obj\\",
+        "outputPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
