@@ -67,7 +67,7 @@ namespace Dal.Services
                 x.ActivityDescription = activity.ActivityDescription;
                 x.Location = activity.Location;
                 x.NightPrice = activity.NightPrice;
-
+                
 
 
                 // all file

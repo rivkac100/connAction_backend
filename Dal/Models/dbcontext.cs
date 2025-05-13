@@ -61,10 +61,10 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
 
-            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
-                .HasForeignKey(d => d.ManagerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Activities");
+            //entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+            //    .HasForeignKey(d => d.ManagerId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>
@@ -150,10 +150,10 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("title");
 
-            entity.HasOne(d => d.Manager).WithMany(p => p.Events)
-                .HasForeignKey(d => d.ManagerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_events_ToTable");
+            //entity.HasOne(d => d.Manager).WithMany(p => p.Events)
+            //    .HasForeignKey(d => d.ManagerId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_events_ToTable");
         });
 
         modelBuilder.Entity<Manager>(entity =>
@@ -233,10 +233,10 @@ public partial class dbcontext : DbContext
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("payment");
 
-            entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
-                .HasForeignKey(d => d.ActivityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Orders_ToTable");
+            //entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
+            //    .HasForeignKey(d => d.ActivityId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_Orders_ToTable");
 
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)

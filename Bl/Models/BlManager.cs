@@ -48,8 +48,8 @@ namespace BL.Models
         public string? ImgPath { get; set; }
 
 
-        public virtual ICollection<BlActivity> Activities { get; set; } = new List<BlActivity>();
-        public virtual ICollection<BlEvent> Events { get; set; } = new List<BlEvent>();
+        public  List<BlActivity> Activities { get; set; } = new List<BlActivity>();
+        public  List<BlEvent> Events { get; set; } = new List<BlEvent>();
 
     }
 }
