@@ -21,6 +21,8 @@ namespace BL.Models
         public string Description { get; set; } = null!;
 
         public int LenOfEvent { get; set; }
+        public int ManagerId { get; set; }
+
 
         //public BlEvent()
         //{

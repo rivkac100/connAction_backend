@@ -6,11 +6,11 @@ namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class managersController : ControllerBase
+    public class ManagersController : ControllerBase
     {
         IBlManager manager;
 
-        public managersController(IBl manager)
+        public ManagersController(IBl manager)
         {
             this.manager = manager.Manager;
         }
