@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1IzCPt4UmWCbIQNUpxqdO9sKuMRMPGEpVQi3X+Ybw1o=",
+  "Hash": "jrIjPo8Bm1zbLd+oHki330YhRmSzsps4YxnFt9sPpxY=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Server\\wwwroot",
       "Source": "Server",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\3fb072c7.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\3fb072c7.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/3fb072c7.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\3fb072c7.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\58664aba.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\58664aba.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/58664aba.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\58664aba.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a419091.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a419091.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/5a419091.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\5a419091.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a5000d5.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a5000d5.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/5a5000d5.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\5a5000d5.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\657a5b3f.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\657a5b3f.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/657a5b3f.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\657a5b3f.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\8add8284.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\8add8284.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/8add8284.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\8add8284.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/b1844c61.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\b1844c61.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\c8e2e1c4.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\c8e2e1c4.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/c8e2e1c4.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\c8e2e1c4.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcef6916.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcef6916.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/dcef6916.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\dcef6916.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcfc4771.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcfc4771.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/dcfc4771.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\IMG\\dcfc4771.jpg"
     },
     {
-      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\f377b080.jpg",
+      "Identity": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\IMG\\f377b080.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "IMG/f377b080.jpg",
       "AssetKind": "All",

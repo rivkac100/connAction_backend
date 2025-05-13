@@ -31,7 +31,7 @@ public partial class dbcontext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\תיקייה כללית חדש\\שנה ב תשפה\\קבוצה א\\תלמידות\\0000000000000000000000חוי וגיטי\\database\\db2.mdf;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\תיקייה כללית חדש\\שנה ב תשפה\\קבוצה א\\תלמידות\\0000000000000000000000חוי וגיטי\\database - Copy (2)\\db2.mdf;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -61,10 +61,10 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
 
-            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
-                .HasForeignKey(d => d.ManagerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Activities");
+            //entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+            //    .HasForeignKey(d => d.ManagerId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>
@@ -150,10 +150,10 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("title");
 
-            entity.HasOne(d => d.Manager).WithMany(p => p.Events)
-                .HasForeignKey(d => d.ManagerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_events_ToTable");
+            //entity.HasOne(d => d.Manager).WithMany(p => p.Events)
+            //    .HasForeignKey(d => d.ManagerId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_events_ToTable");
         });
 
         modelBuilder.Entity<Manager>(entity =>
@@ -233,10 +233,10 @@ public partial class dbcontext : DbContext
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("payment");
 
-            entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
-                .HasForeignKey(d => d.ActivityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Orders_ToTable");
+            //entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
+            //    .HasForeignKey(d => d.ActivityId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_Orders_ToTable");
 
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)

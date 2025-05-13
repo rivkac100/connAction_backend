@@ -43,7 +43,7 @@ namespace Dal.Services
 
         public List<Manager> GetAll()
         {
-            return dbcontext.Managers.Include(x=> x.Activities).ToList();
+            return dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
 
         }
 

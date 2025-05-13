@@ -49,7 +49,7 @@ namespace BL.Models
 
 
         public virtual ICollection<BlActivity> Activities { get; set; } = new List<BlActivity>();
-        public virtual ICollection<BlEvent> Events { get; set; } = new List<BlEvent>();
+        public  List<BlEvent> Events { get; set; } = new List<BlEvent>();
 
     }
 }
