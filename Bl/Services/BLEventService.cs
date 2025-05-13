@@ -72,6 +72,7 @@ namespace BL.Services
             evnt.Description = item.Description;
             evnt.Title = item.Title;
             evnt.LenOfEvent = item.LenOfEvent;
+            evnt.ManagerId = item.ManagerId;
             return evnt;
             }
             return null;
@@ -84,6 +85,7 @@ namespace BL.Services
             evnt.Description = item.Description;
             evnt.LenOfEvent= item.LenOfEvent;
             evnt.Date =new DateTime(item.Date.Year, item.Date.Month, item.Date.Day, item.Time.Hour, item.Time.Minute,item.Time.Second);
+            evnt.ManagerId = item.ManagerId;
             return evnt;
         }
     }

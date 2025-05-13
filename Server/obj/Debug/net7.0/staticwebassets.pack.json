@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\3fb072c7.jpg",
+      "PackagePath": "staticwebassets\\IMG\\3fb072c7.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\58664aba.jpg",
+      "PackagePath": "staticwebassets\\IMG\\58664aba.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a419091.jpg",
+      "PackagePath": "staticwebassets\\IMG\\5a419091.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\5a5000d5.jpg",
+      "PackagePath": "staticwebassets\\IMG\\5a5000d5.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\657a5b3f.jpg",
+      "PackagePath": "staticwebassets\\IMG\\657a5b3f.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\8add8284.jpg",
+      "PackagePath": "staticwebassets\\IMG\\8add8284.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
+      "PackagePath": "staticwebassets\\IMG\\b1844c61.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\c8e2e1c4.jpg",
+      "PackagePath": "staticwebassets\\IMG\\c8e2e1c4.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcef6916.jpg",
+      "PackagePath": "staticwebassets\\IMG\\dcef6916.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\dcfc4771.jpg",
+      "PackagePath": "staticwebassets\\IMG\\dcfc4771.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\f377b080.jpg",
+      "PackagePath": "staticwebassets\\IMG\\f377b080.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Server.props",
+      "PackagePath": "build\\Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Server.props",
+      "PackagePath": "buildMultiTargeting\\Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Server.props",
+      "PackagePath": "buildTransitive\\Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

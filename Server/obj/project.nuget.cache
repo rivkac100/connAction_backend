@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X9I/LXWLinPDsb8A/kjM7OUiSDPxI+c2cT8BsovL5ajeBZlXerfyoKdPWabrmAvWnCTvGZKgF1YmweQfjAx3kQ==",
+  "dgSpecHash": "Dz0+5kMIZBFK1Pl82vZzcohSVYEg3EU+X52PLHPq+rK0nR6vRXtnClWb4P8OeuOLSnGOZgw/kMVH80mx23N99g==",
   "success": true,
-  "projectFilePath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\Server.csproj",
+  "projectFilePath": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angular\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -41,6 +41,7 @@
     "C:\\Users\\angular\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\angular\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\angular\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
