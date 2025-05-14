@@ -11,14 +11,14 @@ namespace BL.Api
 {
     public interface IBlCrud<T,S>
     {
-        List<T> Get();
-        T GetById(int id);
-        void Create(T item);
-        void Update(T item);
-        void Delete(int id);
+        Task<List<T>> Get();
+        Task<T> GetById(int id);
+        Task Create(T item);
+        Task Update(T item);
+        Task Delete(int id);
 
-        T fromDalToBl(S item);
-        S fromBlToDal(T item);
+        Task<T> fromDalToBl(S item);
+        Task<S> fromBlToDal(T item);
         List<T> listFromDalToBl(List<S> item);
         List<S> listFromBlToDal(List<T> item);
     }

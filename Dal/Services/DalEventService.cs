@@ -15,32 +15,27 @@ namespace Dal.Services
         {
             dbcontext = db;
         }
-        public void Create(Event entity)
+        public async Task Create(Event entity)
         {
             dbcontext.Events.Add(entity);
-            dbcontext.SaveChanges();
+            await dbcontext.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             var elist = dbcontext.Events.ToList();
             dbcontext.Remove(elist.Find(x => x.Id == id));
-            dbcontext.SaveChanges();
+            await dbcontext.SaveChangesAsync();
         }
 
-        public List<Event> GetAll()
-        {
-            return dbcontext.Events.ToList();
+        public async Task<List<Event>> GetAll()=>
+            dbcontext.Events.ToList();
 
-        }
+        public async Task<Event?> GetById(int id)=>
+           GetAll().Result.Find(x => x.Id == id);
 
-        public Event? GetById(int id)
-        {
-            return dbcontext.Events.ToList().Find(x => x.Id == id);
-            
-        }
 
-        public void Update(Event entity)
+        public async Task Update(Event entity)
         {
             var elist = dbcontext.Events.ToList();
             var x = elist.Find(x => x.Id == entity.Id);
@@ -56,7 +51,7 @@ namespace Dal.Services
                 x.LenOfEvent = entity.LenOfEvent;
                 x.ManagerId = entity.ManagerId;
                 // all file
-                dbcontext.SaveChanges();
+                await dbcontext.SaveChangesAsync();
             }
         }
     }

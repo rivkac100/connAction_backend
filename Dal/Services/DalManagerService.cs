@@ -19,23 +19,28 @@ namespace Dal.Services
         {
             dbcontext = data;
         }
-        public void Create(Manager entity)
+        public async Task Create(Manager entity)
         {
             dbcontext.Managers.Add(entity);
-            dbcontext.SaveChanges();
+            await dbcontext.SaveChangesAsync();
+
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            
             var mlist = dbcontext.Managers.ToList();
-           // var olist = dbcontext.Orders.ToList();
-            //if (olist.Find(x => x.CustomerId == id) != null)
-            //    dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
+            var alist = dbcontext.Activities.ToList();
+            var elist = dbcontext.Events.ToList();
+            if (alist.FindAll(x => x.ManagerId == id) != null)
+                dbcontext.Activities.RemoveRange(alist.FindAll(x => x.ManagerId == id));
+            if (alist.FindAll(x => x.ManagerId == id) != null)
+                dbcontext.Events.RemoveRange(elist.FindAll(x => x.ManagerId == id));
             if (mlist.Find(x => x.Id == id) != null)
                 dbcontext.Managers.Remove(mlist.Find(x => x.Id == id));
             try
             {
-                dbcontext?.SaveChanges();
+               await dbcontext?.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -44,19 +49,14 @@ namespace Dal.Services
 
         }
 
-        public List<Manager> GetAll()
-        {
-            return dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
+        public async  Task<List<Manager>> GetAll()=>
+                 dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
 
-        }
+        public async Task<Manager?> GetById(int id)=>
+            GetAll().Result.Find(x => x.Id == id);
 
-        public Manager GetById(int id)
-        {
-            return GetAll().Find(x => x.Id == id);
 
-        }
-
-        public void Update(Manager entity)
+        public async Task Update(Manager entity)
         {
             //dbcontext.Customers.Update(customer);
             var mlist = dbcontext.Managers.ToList();
@@ -87,7 +87,7 @@ namespace Dal.Services
 
 
                 // all file
-                dbcontext.SaveChanges();
+                await  dbcontext.SaveChangesAsync();
             }
         }
     }

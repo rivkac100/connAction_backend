@@ -21,11 +21,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (activity.Get() == null)
+            if (activity.Get().Result == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(activity.Get());
+            return Ok(activity.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -38,7 +38,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(activity.GetById(id));
+            return Ok(activity.GetById(id).Result);
         }
   
         [HttpDelete("Delete/{id}")]
@@ -52,7 +52,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(activity.Get());
+            return Ok(activity.Get().Result);
 
         }
         [HttpPut("Update")]
@@ -66,7 +66,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(activity.Get());
+            return Ok(activity.Get().Result);
         }
         [HttpPost("Add")]
         public IActionResult Add(BlActivity a)
@@ -79,7 +79,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(activity.Get());
+            return Ok(activity.Get().Result);
 
         }
 

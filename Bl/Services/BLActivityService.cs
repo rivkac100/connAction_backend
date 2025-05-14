@@ -24,29 +24,29 @@ namespace BL.Services
             this.order = order;
             
         }
-        public void Create(BlActivity item)=>
-            dal.Activity.Create(fromBlToDal(item));
+        public  Task Create(BlActivity item)=>
+            dal.Activity.Create(fromBlToDal(item).Result);
 
 
-        public void Delete(int id)=>
+        public Task Delete(int id)=>
             dal.Activity.Delete(id);
 
 
-        public List<BlActivity> Get()=>
-            listFromDalToBl(dal.Activity.GetAll());
+        public async Task<List<BlActivity>> Get()=>
+           listFromDalToBl(dal.Activity.GetAll().Result);
 
-        public BlActivity GetById(int id)=>
-         fromDalToBl(dal.Activity.GetById(id));
+        public   Task<BlActivity> GetById(int id)=>
+           fromDalToBl(dal.Activity.GetById(id).Result);
        
 
-        public void Update(BlActivity item)=>      
-            dal.Activity.Update(fromBlToDal(item));
-        
-        
-       
-       
+        public async Task Update(BlActivity item)=>      
+            dal.Activity.Update(fromBlToDal(item).Result);
 
-        public BlActivity fromDalToBl(Dal.Models.Activity item)=>
+
+
+ 
+
+        public async Task<BlActivity> fromDalToBl(Dal.Models.Activity item)=>
             new BlActivity() {
               
                 ActivityId = item.ActivityId,
@@ -64,7 +64,7 @@ namespace BL.Services
             
 
 
-        public Dal.Models.Activity fromBlToDal(BlActivity item)=>
+        public async Task<Dal.Models.Activity> fromBlToDal(BlActivity item)=>
              new()
             {
                 ActivityId = item.ActivityId,
@@ -77,24 +77,25 @@ namespace BL.Services
                 //a.Manager = item.Manager;
                 ManagerId = item.ManagerId,
                 ImgPath = item.ImgPath,
-                Orders = order.listFromBlToDal(item.Orders)
-            };
+                 Orders = order.listFromBlToDal(item.Orders)
+             };
          
        
 
       
 
-        public List<BlActivity> listFromDalToBl(List<Dal.Models.Activity> item)
+        public  List<BlActivity> listFromDalToBl(List<Dal.Models.Activity> item)
         {
+            
             List<BlActivity> ls= new List<BlActivity>();    
-            item.ForEach(x=>ls.Add(fromDalToBl(x)));
+            item.ForEach(x=>ls.Add(fromDalToBl(x).Result));
             return ls;
         }
 
         public List<Dal.Models.Activity> listFromBlToDal(List<BlActivity> item)
         {
             List<Dal.Models.Activity> ls = new List<Dal.Models.Activity>();
-            item.ForEach(x => ls.Add(fromBlToDal(x)));
+            item.ForEach(x => ls.Add(fromBlToDal(x).Result));
             return ls;
         }
 

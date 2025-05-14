@@ -17,21 +17,16 @@ namespace BL.Services
             this.dal = dal;
             this.order = order;
         }
-        public void Create(BlCustomer customer)
-        {
-      
-            dal.Customer.Create(fromBlToDal(customer));
-        }
+        public  Task Create(BlCustomer customer)=> 
+            dal.Customer.Create(fromBlToDal(customer).Result);
 
-        public void Delete(int id)
-        {
-            
+
+        public Task Delete(int id)=>         
             dal.Customer.Delete(id);
-        }
 
-        public Customer fromBlToDal(BlCustomer item)
-        {
-            Customer c = new Customer()
+
+        public async Task<Customer> fromBlToDal(BlCustomer item)=>
+          new Customer()
             {
                 //InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
@@ -45,13 +40,10 @@ namespace BL.Services
                 Amount = item.Amount,
                 Due = item.Due,
                 Orders =order.listFromBlToDal(item.Orders.ToList())
-            };
-            return c;
-        }
+           };
 
-        public BlCustomer fromDalToBl(Customer item)
-        {
-            BlCustomer c = new BlCustomer()
+        public async  Task<BlCustomer> fromDalToBl(Customer item)=>
+           new BlCustomer()
             {
                 InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
@@ -66,39 +58,32 @@ namespace BL.Services
                 Due = item.Due,
                 Orders= order.listFromDalToBl(item.Orders.ToList())
             };
-            return c;
-        }
 
-        public List<BlCustomer> Get()
-        {
-            var cList = dal.Customer.GetAll();
-            return listFromDalToBl(cList);
-        }
 
-        public BlCustomer GetById(int id)
-        {
-            Customer c = dal.Customer.GetById(id);
-            return fromDalToBl(c);
 
-        }
+        public async Task<List<BlCustomer>> Get()=>
+            listFromDalToBl(dal.Customer.GetAll().Result);
+
+
+        public async Task<BlCustomer> GetById(int id)=>
+              await  fromDalToBl(dal.Customer.GetById(id).Result);
+
 
         public List<Customer> listFromBlToDal(List<BlCustomer> item)
         {
             List<Customer> list = new();    
-            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            item.ForEach(x=> list.Add(fromBlToDal(x).Result));
             return list;
         }
 
         public List<BlCustomer> listFromDalToBl(List<Customer> item)
         {
             List<BlCustomer> list = new();
-            item.ForEach(x => list.Add(fromDalToBl(x)));
+            item.ForEach(x => list.Add(fromDalToBl(x).Result));
             return list;
         }
 
-        public void Update(BlCustomer customer)
-        {
-            dal.Customer.Update(fromBlToDal(customer));
-        }
+        public Task Update(BlCustomer customer)=>
+            dal.Customer.Update(fromBlToDal(customer).Result);
     }
 }

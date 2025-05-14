@@ -19,11 +19,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (orders.Get() == null)
+            if (orders.Get().Result == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetById(id));
+            return Ok(orders.GetById(id).Result);
         }
         [HttpGet("GetByDate/{date}")]
         public IActionResult Get(DateOnly date)
@@ -49,17 +49,17 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetByDate(date));
+            return Ok(orders.GetByDate(date).Result);
         }
-        [HttpGet("GetByCustomerId/{customerId}")]
-        public IActionResult GetByCustomerId(int customerId)
-        {
-            if (customerId == 0)
-            {
-                return BadRequest("Invalid Id ");
-            }
-            return Ok(orders.GetByCustomerId(customerId));
-        }
+        //[HttpGet("GetByCustomerId/{customerId}")]
+        //public IActionResult GetByCustomerId(int customerId)
+        //{
+        //    if (customerId == 0)
+        //    {
+        //        return BadRequest("Invalid Id ");
+        //    }
+        //    return Ok(orders.GetByCustomerId(customerId));
+        //}
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {
@@ -71,7 +71,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
         }
         [HttpPut("Update")]
         public IActionResult Put(BlOrder c)
@@ -84,10 +84,11 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
+
         }
         [HttpPost("Add")]
-        public void Add(BlOrder c)
+        public IActionResult Add(BlOrder c)
         {
             try
             {
@@ -97,6 +98,8 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
+            return Ok(orders.Get().Result);
+
         }
     }
 }

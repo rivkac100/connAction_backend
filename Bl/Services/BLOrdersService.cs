@@ -23,35 +23,35 @@ namespace BL.Services
    
 
         }
-        public void Create(BlOrder item)=>
-            dal.Order.Create(fromBlToDal(item));
+        public Task Create(BlOrder item)=>
+            dal.Order.Create(fromBlToDal(item).Result);
 
 
-        public void Delete(int id)=>
+        public Task Delete(int id)=>
             dal.Order.Delete(id);
 
 
-        public List<BlOrder> Get()=>
-           listFromDalToBl(dal.Order.GetAll());
+        public async Task<List<BlOrder>> Get()=>
+           listFromDalToBl(dal.Order.GetAll().Result);
 
 
-        public List<BlOrder> GetByCustomerId(int customerId)=>
-        Get().FindAll(x=>x.CustomerId==customerId).ToList();
+        //public async Task<List<BlOrder>> GetByCustomerId(int customerId)=>
+        //Get().Result.FindAll(x=>x.CustomerId==customerId).ToList();
 
 
-        public BlOrder GetById(int id)=>
-            fromDalToBl(dal.Order.GetById(id));
-        public List<BlOrder> GetByDate(DateOnly date)=>
-            listFromDalToBl(dal.Order.GetByDate(date));
+        public async Task<BlOrder> GetById(int id)=>
+           await fromDalToBl(dal.Order.GetById(id).Result);
+        public async Task<List<BlOrder>> GetByDate(DateOnly date)=>
+            listFromDalToBl(dal.Order.GetByDate(date).Result);
 
 
-        public void Update(BlOrder item)=>
-            dal.Order.Update(fromBlToDal(item));
+        public Task Update(BlOrder item)=>
+            dal.Order.Update(fromBlToDal(item).Result);
 
 
-        public BlOrder fromDalToBl(Order item)
+        public async Task<BlOrder> fromDalToBl(Order item)
         {
-            var activ =dal.Activity.GetById(item.ActivityId);
+            var activ =dal.Activity.GetById(item.ActivityId).Result;
             BlOrder order = new();
             order.OrderId = item.OrderId;
             order.CustomerId = item.CustomerId;
@@ -60,7 +60,6 @@ namespace BL.Services
             order.BrokerId = item.BrokerId;
             order.BrokerName = item.Broker?.BrokerName;
             order.CustomerName = item.Customer?.InstituteName;
-            //order.ActivityName = item.Activity?.ActivityDescription;
             order.Payment = item.Payment;
             //order.ActivityPrice = item.Activity.Price;
             //order.ActivityNightPrice=item.Activity.NightPrice;
@@ -69,9 +68,9 @@ namespace BL.Services
             order.ActivityName =activ==null? activ?.ActivityName :null;
             return order;
         }
-        public Order fromBlToDal(BlOrder item)
+        public async Task<Order> fromBlToDal(BlOrder item)
         {
-            var activ = dal.Activity.GetById(item.ActivityId);
+            var activ = dal.Activity.GetById(item.ActivityId).Result;
 
             Order order = new Order
             {
@@ -91,18 +90,18 @@ namespace BL.Services
 
         {
             List< BlOrder> orders = new();
-            item.ForEach(x=> orders.Add(fromDalToBl(x)));
+            item.ForEach(x=> orders.Add(fromDalToBl(x).Result));
             return orders;
         }
         public List<Order> listFromBlToDal(List<BlOrder> item)
         {
             List<Order> orders = new();
-            item.ForEach(x => orders.Add(fromBlToDal(x)));
+            item.ForEach(x => orders.Add(fromBlToDal(x).Result));
             return orders;
         }
 
-        public List<BlOrder> GetByActivityId( int activityId)=>
-            Get().FindAll(x=>x.ActivityId==activityId).ToList();
+        public async Task<List<BlOrder>> GetByActivityId( int activityId)=>
+            Get().Result.FindAll(x=>x.ActivityId==activityId).ToList();
         
 
     }

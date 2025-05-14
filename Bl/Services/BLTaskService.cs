@@ -21,66 +21,57 @@ namespace BL.Services
         {
             this.dal = dal;
         }
-        public void Create(BlTask item)
-        {
-            dal.Task.Create(fromBlToDal(item));
-        }
+        public Task Create(BlTask item) =>
+            dal.Task.Create(fromBlToDal(item).Result);
 
-        public void Delete(int id)
-        {
+
+        public Task Delete(int id) =>
             dal.Task.Delete(id);
-        }
 
-        public List<BlTask> Get()
-        {
-            var tList = dal.Task.GetAll();
-           
-            return listFromDalToBl(tList);
-        }
 
-        public BlTask GetById(int id)
-        {
-            Dal.Models.Task t = dal.Task.GetById(id);
-            return fromDalToBl(t);
-        }
+        public async Task<List<BlTask>> Get() =>
+            listFromDalToBl(dal.Task.GetAll().Result);
 
-        public List<Dal.Models.Task> listFromBlToDal(List<BlTask> item)
+
+        public async Task<BlTask> GetById(int id) =>
+          await fromDalToBl(dal.Task.GetById(id).Result);
+
+
+        public List<MyTask> listFromBlToDal(List<BlTask> item)
         {
-            var ls= new List<Dal.Models.Task>();
-            item.ForEach(x => ls.Add(fromBlToDal(x)));
+            var ls = new List<MyTask>();
+            item.ForEach(x => ls.Add(fromBlToDal(x).Result));
             return ls;
         }
 
-        public List<BlTask> listFromDalToBl(List<Dal.Models.Task> item)
+        public List<BlTask> listFromDalToBl(List<MyTask> item)
         {
-            List<BlTask> ls= new List<BlTask>();
-            item.ForEach(x=>ls.Add(fromDalToBl(x)));
+            List<BlTask> ls = new List<BlTask>();
+            item.ForEach(x => ls.Add(fromDalToBl(x).Result));
             return ls;
         }
 
-        public void Update(BlTask item)
-        {
-            dal.Task.Update(fromBlToDal(item));
-        }
+        public Task Update(BlTask item) =>
+            dal.Task.Update(fromBlToDal(item).Result);
 
-         public BlTask fromDalToBl(Dal.Models.Task item)
+
+        public async Task<BlTask> fromDalToBl(MyTask item) =>
+         new()
          {
-            BlTask task = new();
-            task.TaskId = item.TaskId;
-            task.TaskIsDone= item.TaskIsDone;
-            task.TaskDescription = item.TaskDescription;
-            task.TaskTime = item.TaskTime;
-            return task;
-         }
+             TaskId = item.TaskId,
+             TaskIsDone = item.TaskIsDone,
+             TaskDescription = item.TaskDescription,
+             TaskTime = item.TaskTime,
+         };
 
-           public Dal.Models.Task fromBlToDal(BlTask item)
-           {
-            Dal.Models.Task task = new();
-            task.TaskId = item.TaskId;
-            task.TaskIsDone = item.TaskIsDone;          
-            task.TaskDescription = item.TaskDescription;
-            task.TaskTime = item.TaskTime;
-            return task;
-           }
+        public async Task<MyTask> fromBlToDal(BlTask item) =>
+         new()
+         {
+             TaskId = item.TaskId,
+             TaskIsDone = item.TaskIsDone,
+             TaskDescription = item.TaskDescription,
+             TaskTime = item.TaskTime,
+         };
+
     }
 }
