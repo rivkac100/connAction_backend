@@ -10,11 +10,11 @@ namespace Dal.Api
 {
     public interface ICrud<T>
     {
-        List<T> GetAll();
-        T GetById(int id);
-        void Delete(int id);
-        void Create(T entity);
-        void Update(T entity);
+        Task<List<T>> GetAll();
+        Task<T?> GetById(int id);
+        Task Delete(int id);
+        Task Create(T entity);
+        Task Update(T entity);
 
     }
 }

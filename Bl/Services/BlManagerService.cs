@@ -29,18 +29,14 @@ namespace BL.Services
             this.customer = customer;
             this.evnt = evnt;
         }
-        public void Create(BlManager item)
-        {
-           
-            dal.Manager.Create(fromBlToDal(item));
-        }
+        public Task Create(BlManager item)=>
+            dal.Manager.Create(fromBlToDal(item).Result);
 
-        public void Delete(int id)
-        {
+
+        public Task Delete(int id) =>
             dal.Manager.Delete(id);
-        }
 
-        public Manager fromBlToDal(BlManager item)=>
+        public async Task<Manager> fromBlToDal(BlManager item)=>
            new Manager()
             {
                 Id = item.Id,
@@ -67,7 +63,7 @@ namespace BL.Services
            };
       
 
-        public BlManager fromDalToBl(Manager item)=>
+        public async Task<BlManager> fromDalToBl(Manager item)=>
             new BlManager()
             {
                 
@@ -94,57 +90,51 @@ namespace BL.Services
             };
 
 
-        public List<BlManager> Get()
-        {
-            var mList = dal.Manager.GetAll();
-         return listFromDalToBl(mList);
-        
-        }
+        public async  Task<List<BlManager>> Get()=>
+             listFromDalToBl(dal.Manager.GetAll().Result);
+          
 
-        public BlManager GetById(int id)
-        {
-            Manager c = dal.Manager.GetById(id);
-            return fromDalToBl(c);
-        }
+        public Task<BlManager> GetById(int id)=>
+             fromDalToBl(dal.Manager.GetById(id).Result);
+ 
 
         public List<Manager> listFromBlToDal(List<BlManager> item)
         {
             List<Manager> list = new List<Manager>();
-            item.ForEach(x=> list.Add(fromBlToDal(x)));
+            item.ForEach(x=> list.Add(fromBlToDal(x).Result));
             return list;
         }
 
         public List<BlManager> listFromDalToBl(List<Manager> item)
         {
             List<BlManager> list = new();
-            item.ForEach(c => list.Add(fromDalToBl(c)));
+            item.ForEach(c => list.Add(fromDalToBl(c).Result));
             return list;
         }
 
-        public void Update(BlManager item)
-        {
-         
-            dal.Manager.Update(fromBlToDal(item));
-        }
-        public List<BlActivity> GetActivitiesByManagerId(int managerId) =>
-                GetById(managerId).Activities.ToList();
-        public List<BlOrder> GetOrdersByManagerId(int managerId)
+        public Task Update(BlManager item)=>
+
+            dal.Manager.Update(fromBlToDal(item).Result);
+
+        public async Task<List<BlActivity>> GetActivitiesByManagerId(int managerId) =>
+                GetById(managerId).Result.Activities.ToList();
+        public async Task<List<BlOrder>> GetOrdersByManagerId(int managerId)
         {
             List<BlOrder> orders = new();
             
-            GetActivitiesByManagerId(managerId).ForEach(x=>orders.AddRange(x.Orders));
+            GetActivitiesByManagerId(managerId).Result.ForEach(x=>orders.AddRange(x.Orders));
             return orders;
 
         }
 
 
 
-        public List<BlCustomer> GetCustomersByManagerId(int managerId)
+        public async Task<List<BlCustomer>> GetCustomersByManagerId(int managerId)
         {   
-            var olist = GetOrdersByManagerId(managerId);
+            var olist = GetOrdersByManagerId(managerId).Result;
             List<BlCustomer> ls = new();//customer.Get().ToList();
-            olist.ForEach(x => ls.Add(customer.GetById(x.CustomerId)));
-            ls.DistinctBy(x=> x.InstituteId);
+            olist.ForEach(x => ls.Add(customer.GetById(x.CustomerId).Result));
+            ls.Select(x=>x).DistinctBy(x=> x.InstituteId);
             //ls = (from n in ls select n ).ToList();
             return ls;
         }

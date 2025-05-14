@@ -18,12 +18,12 @@ namespace Dal.Services
         {
             dbcontext = db;
         }
-        public void Create(Order entity)
+        public async Task Create(Order entity)
         {
             dbcontext.Orders.Add(entity);
             try
             {
-                dbcontext.SaveChanges();
+              await  dbcontext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -32,12 +32,12 @@ namespace Dal.Services
             }
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            var olist = GetAll();
+            var olist = GetAll().Result;
             dbcontext.Remove(olist.Find(x => x.OrderId == id));
             try { 
-            dbcontext.SaveChanges();
+           await dbcontext.SaveChangesAsync();
             }
             catch(Exception ex) {
                 throw new Exception("cant save changes ");
@@ -46,31 +46,24 @@ namespace Dal.Services
             
         }
 
-        public List<Order> GetAll()
-        {
-            return dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).ToList();   
-        }
+        public async Task<List<Order>> GetAll()=>
+            dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).ToList();   
 
-        public Order? GetById(int id)
-        {
-            return GetAll().Find(x=>x.OrderId==id);
-        }
-        public List<Order>? GetByDate(DateOnly date)
-        {
-            return GetAll().FindAll(x => DateOnly.FromDateTime(x.Date)  == date).ToList();
-        }
-        //public List<Order> GetByorderId(int orderId)
-        //{
-        //    return dbcontext.Orders.ToList().FindAll(x => x.orderId == orderId);
-        //}
+
+        public async Task<Order?> GetById(int id)=>
+             GetAll().Result.Find(x=>x.OrderId==id);
+  
+        public async Task<List<Order>?> GetByDate(DateOnly date)=>
+            GetAll().Result.FindAll(x => DateOnly.FromDateTime(x.Date)  == date).ToList();
+
 
         /// <summary> 
         ///update order in data base
         /// </summary>
         /// <param name="order">עדכון הזמנה</param>
-        public void Update(Order order)
+        public async Task Update(Order order)
         {
-            var olist = GetAll();
+            var olist = GetAll().Result;
             var x=olist.Find(x => x.OrderId == order.OrderId);
             if (x != null)
             {
@@ -85,7 +78,7 @@ namespace Dal.Services
                 x.Date=order.Date;
                 
                 // all file
-                dbcontext.SaveChanges();
+               await dbcontext.SaveChangesAsync();
             }
         }
     }

@@ -18,11 +18,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (manager.Get() == null)
+            if (manager.Get().Result == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(manager.Get());
+            return Ok(manager.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -35,7 +35,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(manager.GetById(id));
+            return Ok(manager.GetById(id).Result);
         }
         [HttpGet("GetCustomersById/{id}")]
         public IActionResult GetCustomersByManagerId(int id)
@@ -48,7 +48,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(manager.GetCustomersByManagerId(id));
+            return Ok(manager.GetCustomersByManagerId(id).Result);
         }
         [HttpGet("GetOrdersById/{id}")]
         public IActionResult GetOrdrsByManagerId(int id)
@@ -61,7 +61,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(manager.GetOrdersByManagerId(id));
+            return Ok(manager.GetOrdersByManagerId(id).Result);
         }
         [HttpGet("GetActivitiesById/{id}")]
         public IActionResult GetActivitiesByManagerId(int id)
@@ -74,7 +74,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(manager.GetActivitiesByManagerId(id));
+            return Ok(manager.GetActivitiesByManagerId(id).Result);
         }
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
@@ -87,7 +87,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(manager.Get());
+            return Ok(manager.Get().Result);
 
         }
         [HttpPut("Update")]
@@ -102,7 +102,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(manager.Get());
+            return Ok(manager.Get().Result);
         }
         [HttpPost("Add")]
         public IActionResult Add(BlManager c)
@@ -115,7 +115,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(manager.Get());
+            return Ok(manager.Get().Result);
 
         }
 

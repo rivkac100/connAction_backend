@@ -3,6 +3,8 @@
 using Dal.Api;
 using Dal.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+
 
 namespace Dal.Services
 {
@@ -14,23 +16,23 @@ namespace Dal.Services
             dbcontext = data;
         }
 
-        public void Create(Customer customer)
+        public async Task Create(Customer customer)
         {
-            dbcontext.Customers.Add(customer);
-            dbcontext.SaveChanges();
+             dbcontext.Customers.Add(customer);
+             await dbcontext.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             var clist = dbcontext.Customers.ToList();
             var olist =dbcontext.Orders.ToList();
             if(olist.Find(x => x.CustomerId == id)!=null)
-            dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
+            dbcontext.Orders.RemoveRange(olist.FindAll(x => x.CustomerId == id));
             if (clist.Find(x => x.InstituteId == id) != null)
             dbcontext.Customers.Remove(clist.Find(x => x.InstituteId == id));
             try
             {
-                dbcontext?.SaveChanges();
+              await  dbcontext?.SaveChangesAsync();
             }catch (Exception ex)
             {
                 throw new Exception("cant save chenges -customer");
@@ -38,22 +40,19 @@ namespace Dal.Services
            
         }
 
-        public List<Customer> GetAll()
-        {
-            return dbcontext.Customers.Include(x => x.Orders).ToList();
-        }
+        public async Task<List<Customer>> GetAll()=>
+            dbcontext.Customers.Include(x => x.Orders).ToList();
+     
 
         public dbcontext GetDbcontext()
         {
             return dbcontext;
         }
 
-        public Customer? GetById(int id)
-        {
-            return GetAll().Find(x => x.InstituteId == id);
-        }
+        public async Task<Customer?> GetById(int id)=>
+               GetAll().Result.Find(x => x.InstituteId == id);
 
-        public void Update(Customer customer)
+        public async Task Update(Customer customer)
         {
             
             //dbcontext.Customers.Update(customer);
@@ -74,7 +73,7 @@ namespace Dal.Services
                 x.Due = customer.Due;
 
                 // all file
-                dbcontext.SaveChanges();
+                await dbcontext.SaveChangesAsync();
             }
         }
     }

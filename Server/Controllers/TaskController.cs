@@ -19,11 +19,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (tasks.Get() == null)
+            if (tasks.Get().Result == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(tasks.Get());
+            return Ok(tasks.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(tasks.GetById(id));
+            return Ok(tasks.GetById(id).Result);
         }
         [HttpDelete("Delete/{id}")]
         public void Delete(int id)

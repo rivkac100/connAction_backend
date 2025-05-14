@@ -17,11 +17,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (events.Get() == null)
+            if (events.Get().Result == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(events.Get());
+            return Ok(events.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -34,7 +34,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(events.GetById(id));
+            return Ok(events.GetById(id).Result);
         }
         //[HttpGet("GetByCustomerId/{customerId}")]
         //public IActionResult GetByCustomerId(int customerId)
@@ -56,7 +56,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(events.Get());
+            return Ok(events.Get().Result);
         }
         [HttpPut("Update")]
         public IActionResult Put(BlEvent e)
@@ -69,7 +69,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(events.Get());
+            return Ok(events.Get().Result);
         }
         [HttpPost("Add")]
         public IActionResult Add(BlEvent e)
@@ -82,7 +82,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(events.Get());
+            return Ok(events.Get().Result);
 
         }
     }

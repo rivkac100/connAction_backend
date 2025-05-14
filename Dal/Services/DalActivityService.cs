@@ -16,23 +16,25 @@ namespace Dal.Services
 
 
 
-        public void Create(Activity a)
+        public async Task Create(Activity a)
         {
             dbcontext.Activities.Add(a);
-            dbcontext.SaveChanges();
+            await dbcontext.SaveChangesAsync();
+
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             var alist = dbcontext.Activities.ToList();
             var olist = dbcontext.Orders.ToList();
             if (olist.Find(x => x.CustomerId == id) != null)
-                dbcontext.Orders.Remove(olist.Find(x => x.ActivityId == id));
+                dbcontext.Orders.RemoveRange(olist.FindAll(x => x.ActivityId == id));
             if (alist.Find(x => x.ActivityId == id) != null)
                 dbcontext.Activities.Remove(alist.Find(x => x.ActivityId == id));
             try
             {
-                dbcontext?.SaveChanges();
+                await dbcontext?.SaveChangesAsync();
+
             }
             catch (Exception ex)
             {
@@ -40,25 +42,21 @@ namespace Dal.Services
             };
         }
 
-        public List<Activity> GetAll()
-        {
-            return dbcontext.Activities.Include(x => x.Orders).ToList();
-        }
+        public async Task<List<Activity>> GetAll()=>
+            dbcontext.Activities.Include(x => x.Orders).ToList();
         public dbcontext GetDbcontext()
         {
             return dbcontext;
         }
 
 
-        public Activity? GetById(int id)
-        {
-            return GetAll().Find(x => x.ActivityId == id);
-        }
+        public  async Task<Activity?> GetById(int id)=>
+              GetAll().Result.Find(x => x.ActivityId == id);
 
-        public void Update(Activity activity)
+
+        public async Task Update(Activity activity)
         {
 
-            //dbcontext.Customers.Update(customer);
             var alist = dbcontext.Activities.ToList();
             var x = alist.Find(x => x.ActivityId == activity.ActivityId);
             if (x != null)
@@ -67,11 +65,8 @@ namespace Dal.Services
                 x.ActivityDescription = activity.ActivityDescription;
                 x.Location = activity.Location;
                 x.NightPrice = activity.NightPrice;
-                
-
-
-                // all file
-                dbcontext.SaveChanges();
+   
+             await dbcontext.SaveChangesAsync();
             }
         }
     }

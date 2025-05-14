@@ -18,31 +18,28 @@ namespace Dal.Services
             dbcontext = db;
         }
 
-        public void Create(Models.Task entity)
+        public async Task Create(MyTask entity)
         {
             dbcontext.Tasks.Add(entity);
-            dbcontext.SaveChanges();
+           await dbcontext.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             var tlist = dbcontext.Tasks.ToList();
             dbcontext.Remove(tlist.Find(x => x.TaskId == id));
-            dbcontext?.SaveChanges();
+            await dbcontext?.SaveChangesAsync();
         }
 
-        public List<Models.Task> GetAll()
-        {
-            return dbcontext.Tasks.ToList();
-        }
+        public async Task<List<MyTask>> GetAll()=>
+              dbcontext.Tasks.ToList();
+       
 
-        public Models.Task? GetById(int id)
-        {
-            return dbcontext.Tasks.ToList().Find(x=>x.TaskId==id);
+        public async  Task<MyTask?> GetById(int id)=>
+           GetAll().Result.Find(x=>x.TaskId==id);
 
-        }
 
-        public void Update(Models.Task entity)
+        public async Task Update(MyTask entity)
         {
             var tlist = dbcontext.Tasks.ToList();
 
@@ -60,7 +57,7 @@ namespace Dal.Services
                 dbcontext.SaveChanges();
             }
 
-            dbcontext.SaveChanges();
+           await dbcontext.SaveChangesAsync();
         }
     }
 }

@@ -27,7 +27,7 @@ public partial class dbcontext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
-    public virtual DbSet<Task> Tasks { get; set; }
+    public virtual DbSet<MyTask> Tasks { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -248,7 +248,7 @@ public partial class dbcontext : DbContext
                 .HasConstraintName("FK_Orders_ToTable_1");
         });
 
-        modelBuilder.Entity<Task>(entity =>
+        modelBuilder.Entity<MyTask>(entity =>
         {
             entity.HasKey(e => e.TaskId).HasName("PK__tmp_ms_x__DD5D5A4272AC8F11");
 

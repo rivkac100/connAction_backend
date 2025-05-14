@@ -1,5 +1,6 @@
 ﻿//בס"ד
 
+using Dal.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    public interface IDalTask : ICrud<Dal.Models.Task>
+    public interface IDalTask : ICrud<MyTask>
     {
     }
 }
