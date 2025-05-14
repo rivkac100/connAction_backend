@@ -21,11 +21,13 @@ namespace BL.Services
         IBlActivity activity;
         IBlOrder order;
         IBlCustomer customer;
-        public BlManagerService(IDal dal,IBlActivity activity, IBlCustomer customer)
+        IBlEvent evnt;
+        public BlManagerService(IDal dal,IBlActivity activity, IBlCustomer customer,IBlEvent evnt)
         {
             this.dal = dal;
             this.activity = activity;
             this.customer = customer;
+            this.evnt = evnt;
         }
         public void Create(BlManager item)
         {
@@ -59,8 +61,10 @@ namespace BL.Services
                 Kategoty = item.Kategoty,
                 ImgPath = item.ImgPath,
                 Pass = item.Pass,
-                Activities = activity.listFromBlToDal(item.Activities.ToList()).ToList()
-            };
+                Activities = activity.listFromBlToDal(item.Activities.ToList()),
+                Events = evnt.listFromBlToDal(item.Events.ToList())
+
+           };
       
 
         public BlManager fromDalToBl(Manager item)=>
@@ -85,7 +89,8 @@ namespace BL.Services
                 Kategoty=item.Kategoty,
                 ImgPath=item.ImgPath,
                 Pass=item.Pass,
-                Activities= activity.listFromDalToBl(item.Activities.ToList()).ToList()
+                Activities= activity.listFromDalToBl(item.Activities.ToList()),
+                Events=evnt.listFromDalToBl(item.Events.ToList())
             };
 
 
