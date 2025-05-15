@@ -19,11 +19,11 @@ namespace Server.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            if (orders.Get().Result == null)
+            if (orders.Get() == null)
             {
                 return NotFound("Not Found");
             }
-            return Ok(orders.Get().Result);
+            return Ok(orders.Get());
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetById(id).Result);
+            return Ok(orders.GetById(id));
         }
         [HttpGet("GetByDate/{date}")]
         public IActionResult Get(DateOnly date)
@@ -49,7 +49,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetByDate(date).Result);
+            return Ok(orders.GetByDate(date));
         }
         //[HttpGet("GetByCustomerId/{customerId}")]
         //public IActionResult GetByCustomerId(int customerId)
@@ -71,7 +71,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get().Result);
+            return Ok(orders.Get());
         }
         [HttpPut("Update")]
         public IActionResult Put(BlOrder c)
@@ -84,11 +84,10 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get().Result);
-
+            return Ok(orders.Get());
         }
         [HttpPost("Add")]
-        public IActionResult Add(BlOrder c)
+        public void Add(BlOrder c)
         {
             try
             {
@@ -98,8 +97,6 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get().Result);
-
         }
     }
 }

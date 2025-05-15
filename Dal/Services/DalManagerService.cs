@@ -23,19 +23,14 @@ namespace Dal.Services
         {
             dbcontext.Managers.Add(entity);
             await dbcontext.SaveChangesAsync();
-
         }
 
         public async Task Delete(int id)
         {
-            
             var mlist = dbcontext.Managers.ToList();
-            var alist = dbcontext.Activities.ToList();
-            var elist = dbcontext.Events.ToList();
-            if (alist.FindAll(x => x.ManagerId == id) != null)
-                dbcontext.Activities.RemoveRange(alist.FindAll(x => x.ManagerId == id));
-            if (alist.FindAll(x => x.ManagerId == id) != null)
-                dbcontext.Events.RemoveRange(elist.FindAll(x => x.ManagerId == id));
+           // var olist = dbcontext.Orders.ToList();
+            //if (olist.Find(x => x.CustomerId == id) != null)
+            //    dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
             if (mlist.Find(x => x.Id == id) != null)
                 dbcontext.Managers.Remove(mlist.Find(x => x.Id == id));
             try
@@ -49,12 +44,17 @@ namespace Dal.Services
 
         }
 
-        public async  Task<List<Manager>> GetAll()=>
-                 dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
+        public async Task<List<Manager>> GetAll()
+        {
+            return dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
 
-        public async Task<Manager?> GetById(int id)=>
-            GetAll().Result.Find(x => x.Id == id);
+        }
 
+        public async Task<Manager> GetById(int id)
+        {
+            return GetAll().Result.Find(x => x.Id == id);
+
+        }
 
         public async Task Update(Manager entity)
         {
@@ -87,7 +87,7 @@ namespace Dal.Services
 
 
                 // all file
-                await  dbcontext.SaveChangesAsync();
+               await dbcontext.SaveChangesAsync();
             }
         }
     }
