@@ -28,9 +28,12 @@ namespace Dal.Services
         public async Task Delete(int id)
         {
             var mlist = dbcontext.Managers.ToList();
-           // var olist = dbcontext.Orders.ToList();
-            //if (olist.Find(x => x.CustomerId == id) != null)
-            //    dbcontext.Orders.Remove(olist.Find(x => x.CustomerId == id));
+            var elist = dbcontext.Events.ToList();
+            var alist= dbcontext.Activities.ToList();
+            if (elist.FindAll(x => x.ManagerId == id) != null)
+              await dbcontext.Events.RemoveRange(olist.FindAll(x => x.ManagerId == id));
+            if (alist.FindAll(x => x.ManagerId == id) != null)
+              await dbcontext.Activities.RemoveRange(olist.FindAll(x => x.ManagerId == id));
             if (mlist.Find(x => x.Id == id) != null)
                 dbcontext.Managers.Remove(mlist.Find(x => x.Id == id));
             try
