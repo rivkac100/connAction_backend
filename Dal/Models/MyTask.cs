@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Dal.Models;
 
- public partial  class MyTask
+ public   class MyTask
 {
     public int TaskId { get; set; }
 

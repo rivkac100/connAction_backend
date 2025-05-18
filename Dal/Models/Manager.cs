@@ -9,7 +9,7 @@ public partial class Manager
 
     public string ManagerName { get; set; } = null!;
 
-    public int Pass { get; set; }
+    public string Pass { get; set; } = null!;
 
     public string CompName { get; set; } = null!;
 

@@ -151,10 +151,10 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("title");
 
-            //entity.HasOne(d => d.Manager).WithMany(p => p.Events)
-            //    .HasForeignKey(d => d.ManagerId)
-            //    .OnDelete(DeleteBehavior.ClientSetNull)
-            //    .HasConstraintName("FK_events_ToTable");
+            //    entity.HasOne(d => d.Manager).WithMany(p => p.Events)
+            //        .HasForeignKey(d => d.ManagerId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("FK_events_ToTable");
         });
 
         modelBuilder.Entity<Manager>(entity =>
@@ -215,7 +215,10 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("managerTel");
             entity.Property(e => e.NumOfComp).HasColumnName("numOfComp");
-            entity.Property(e => e.Pass).HasColumnName("pass");
+            entity.Property(e => e.Pass)
+                .HasMaxLength(10)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("pass");
         });
 
         modelBuilder.Entity<Order>(entity =>
