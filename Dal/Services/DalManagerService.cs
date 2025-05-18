@@ -31,9 +31,9 @@ namespace Dal.Services
             var elist = dbcontext.Events.ToList();
             var alist= dbcontext.Activities.ToList();
             if (elist.FindAll(x => x.ManagerId == id) != null)
-              await dbcontext.Events.RemoveRange(olist.FindAll(x => x.ManagerId == id));
+               dbcontext.Events.RemoveRange(elist.FindAll(x => x.ManagerId == id));
             if (alist.FindAll(x => x.ManagerId == id) != null)
-              await dbcontext.Activities.RemoveRange(olist.FindAll(x => x.ManagerId == id));
+               dbcontext.Activities.RemoveRange(alist.FindAll(x => x.ManagerId == id));
             if (mlist.Find(x => x.Id == id) != null)
                 dbcontext.Managers.Remove(mlist.Find(x => x.Id == id));
             try

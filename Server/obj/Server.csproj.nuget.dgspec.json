@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\Server.csproj": {}
+    "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\BL.csproj": {
+    "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\BL.csproj",
+        "projectUniqueName": "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\BL.csproj",
+        "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\BL.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\obj\\",
+        "outputPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,8 +35,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj": {
-                "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj"
+              "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj": {
+                "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj": {
+    "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj",
+        "projectUniqueName": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\Dal.csproj",
+        "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Dal\\obj\\",
+        "outputPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\Server.csproj": {
+    "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\Server.csproj",
+        "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\angular\\.nuget\\packages\\",
-        "outputPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Server\\obj\\",
+        "outputPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -186,8 +186,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\BL.csproj": {
-                "projectPath": "D:\\חוי רוטנברג\\C#\\bsd-c--c-g\\Bl\\BL.csproj"
+              "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\BL.csproj": {
+                "projectPath": "D:\\גיטי קאהן\\bsd-c--c-g\\Bl\\BL.csproj"
               }
             }
           }
