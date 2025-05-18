@@ -134,9 +134,9 @@ namespace BL.Services
             var olist = GetOrdersByManagerId(managerId).Result;
             List<BlCustomer> ls = new();//customer.Get().ToList();
             olist.ForEach(x => ls.Add(customer.GetById(x.CustomerId).Result));
-            ls.Select(x => x).DistinctBy(x => x.InstituteId);
+            return   (List<BlCustomer>)ls.DistinctBy(x => x.InstituteId);
             //ls = (from n in ls select n).ToList();
-            return ls;
+     
         }
     }
 }

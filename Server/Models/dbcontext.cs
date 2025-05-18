@@ -23,6 +23,8 @@ public partial class dbcontext : DbContext
 
     public virtual DbSet<Event> Events { get; set; }
 
+    public virtual DbSet<Manager> Managers { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<Task> Tasks { get; set; }
@@ -35,20 +37,34 @@ public partial class dbcontext : DbContext
     {
         modelBuilder.Entity<Activity>(entity =>
         {
-            entity.HasKey(e => e.ActivityId).HasName("PK__tmp_ms_x__0FC9CBECA397F4FE");
+            entity.HasKey(e => e.ActivityId).HasName("PK__tmp_ms_x__0FC9CBECFB015D43");
 
             entity.Property(e => e.ActivityId).HasColumnName("activityId");
             entity.Property(e => e.ActivityDescription)
-                .HasMaxLength(10)
+                .HasMaxLength(250)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("activityDescription");
+            entity.Property(e => e.ActivityName)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("activityName");
+            entity.Property(e => e.ImgPath)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("imgPath");
             entity.Property(e => e.LenOfActivity).HasColumnName("lenOfActivity");
             entity.Property(e => e.Location)
                 .HasMaxLength(100)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("location");
+            entity.Property(e => e.ManagerId).HasColumnName("managerId");
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
+
+            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>
@@ -128,10 +144,80 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("description");
             entity.Property(e => e.LenOfEvent).HasColumnName("lenOfEvent");
+            entity.Property(e => e.ManagerId).HasColumnName("managerId");
             entity.Property(e => e.Title)
                 .HasMaxLength(20)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("title");
+
+            entity.HasOne(d => d.Manager).WithMany(p => p.Events)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_events_ToTable");
+        });
+
+        modelBuilder.Entity<Manager>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__managers__3214EC0705210E12");
+
+            entity.ToTable("managers");
+
+            entity.Property(e => e.AccountNum).HasColumnName("accountNum");
+            entity.Property(e => e.Address)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("address");
+            entity.Property(e => e.Bank)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("bank");
+            entity.Property(e => e.BankBranch).HasColumnName("bankBranch");
+            entity.Property(e => e.City)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("city");
+            entity.Property(e => e.CompName)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("compName");
+            entity.Property(e => e.Description)
+                .HasMaxLength(1000)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("description");
+            entity.Property(e => e.ImgPath)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("imgPath");
+            entity.Property(e => e.Kategoty)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("kategoty");
+            entity.Property(e => e.MOrP).HasColumnName("mOrP");
+            entity.Property(e => e.ManagerEmail)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerEmail");
+            entity.Property(e => e.ManagerFax)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerFax");
+            entity.Property(e => e.ManagerName)
+                .HasMaxLength(30)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerName");
+            entity.Property(e => e.ManagerPhone)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerPhone");
+            entity.Property(e => e.ManagerTel)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("managerTel");
+            entity.Property(e => e.NumOfComp).HasColumnName("numOfComp");
+            entity.Property(e => e.Pass)
+                .HasMaxLength(10)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("pass");
         });
 
         modelBuilder.Entity<Order>(entity =>
@@ -153,7 +239,7 @@ public partial class dbcontext : DbContext
             entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.ActivityId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Orders_ToTable_2 (activityId)");
+                .HasConstraintName("FK_Orders_ToTable");
 
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)

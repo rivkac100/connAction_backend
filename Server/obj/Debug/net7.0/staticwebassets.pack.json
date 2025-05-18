@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\199d92dd.jpg",
+      "PackagePath": "staticwebassets\\IMG\\199d92dd.jpg"
+    },
+    {
       "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\1b97137a.jpg",
       "PackagePath": "staticwebassets\\IMG\\1b97137a.jpg"
     },
@@ -51,6 +55,14 @@
     {
       "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
       "PackagePath": "staticwebassets\\IMG\\b1844c61.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b18abf80.jpg",
+      "PackagePath": "staticwebassets\\IMG\\b18abf80.jpg"
+    },
+    {
+      "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b90d7686.JPG",
+      "PackagePath": "staticwebassets\\IMG\\b90d7686.JPG"
     },
     {
       "Id": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\c1d829d2.jpg",

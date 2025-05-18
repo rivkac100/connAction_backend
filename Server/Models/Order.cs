@@ -11,7 +11,7 @@ public partial class Order
 
     public int? BrokerId { get; set; }
 
-    public decimal Payment { get; set; }
+    public decimal? Payment { get; set; }
 
     public int AmountOfParticipants { get; set; }
 
