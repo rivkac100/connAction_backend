@@ -49,15 +49,24 @@ namespace Dal.Services
 
         public async Task<List<Manager>> GetAll()
         {
-            return dbcontext.Managers.Include(x=> x.Activities).Include(x=>x.Events).ToList();
+            try
+            {
+             return   dbcontext.Managers.Include(x => x.Activities).Include(x => x.Events).ToList();
 
+            }
+            catch (Exception ex) {
+                throw new Exception("cant give get all");
+
+            }
+         
+
+            
         }
 
-        public async Task<Manager> GetById(int id)
-        {
-            return GetAll().Result.Find(x => x.Id == id);
 
-        }
+            public async Task<Manager> GetById(int id)=>
+           GetAll().Result.Find(x => x.Id == id);
+
 
         public async Task Update(Manager entity)
         {

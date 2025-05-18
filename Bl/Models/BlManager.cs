@@ -15,7 +15,8 @@ namespace BL.Models
 
         public string ManagerName { get; set; } = null!;
 
-        public string Pass { get; set; }
+        public string Pass { get; set; } = null!;
+
 
         public string CompName { get; set; } = null!;
 
