@@ -21,7 +21,7 @@ namespace Dal.Services
         public async Task Create(MyTask entity)
         {
             dbcontext.Tasks.Add(entity);
-           await dbcontext.SaveChangesAsync();
+            await dbcontext.SaveChangesAsync();
         }
 
         public async Task Delete(int id)
@@ -31,12 +31,12 @@ namespace Dal.Services
             await dbcontext?.SaveChangesAsync();
         }
 
-        public async Task<List<MyTask>> GetAll()=>
+        public async Task<List<MyTask>> GetAll() =>
               dbcontext.Tasks.ToList();
-       
 
-        public async  Task<MyTask?> GetById(int id)=>
-           GetAll().Result.Find(x=>x.TaskId==id);
+
+        public async Task<MyTask?> GetById(int id) =>
+           GetAll().Result.Find(x => x.TaskId == id);
 
 
         public async Task Update(MyTask entity)
@@ -44,20 +44,21 @@ namespace Dal.Services
             var tlist = dbcontext.Tasks.ToList();
 
             //dbcontext.Tasks.Update(tlist.Find(x => x.TaskId == entity.TaskId));
-           var x=tlist.Find(x => x.TaskId == entity.TaskId);
+            var x = tlist.Find(x => x.TaskId == entity.TaskId);
             if (x != null)
             {
                 // dbcontext.Customers.Update(x);
 
-                x.TaskTime = entity.TaskTime;              
+                x.TaskTime = entity.TaskTime;
                 x.TaskDescription = entity.TaskDescription;
                 x.TaskIsDone = entity.TaskIsDone;
-                
+
                 // all file
                 dbcontext.SaveChanges();
             }
 
-           await dbcontext.SaveChangesAsync();
+            await dbcontext.SaveChangesAsync();
         }
     }
 }
+

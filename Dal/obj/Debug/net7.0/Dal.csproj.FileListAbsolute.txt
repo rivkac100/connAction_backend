@@ -40,3 +40,17 @@ D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
 D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
 D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
