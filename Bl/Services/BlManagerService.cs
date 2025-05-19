@@ -139,5 +139,49 @@ namespace BL.Services
             //ls = (from n in ls select n).ToList();
 
         }
+
+        public async Task<bool> isTimeEmpty(int managerId, DateOnly date, TimeOnly time, double len)
+        {
+            var ols = GetOrdersByManagerId(managerId).Result.FindAll(x=> x.Date.Equals(date)).ToList();
+            var els =GetById(managerId).Result.Events;
+           if(ols.Find(x=> x.ActiveHour.IsBetween(time, new TimeOnly((time.Hour + (int)len + 1) % 24, 0)))!=null )
+              return false;
+            foreach(var ol in ols)
+            {
+            
+                    var a = activity.GetById(ol.ActivityId).Result.LenOfActivity;
+                   if(time.IsBetween(ol.ActiveHour,new TimeOnly(ol.ActiveHour.Hour+(int)a+1, 0)))
+                       
+                        return false;        
+           }
+            //if(time.Hour+len>23
+            //if(ols.FindAll((x)=> 
+            //    x.Date.Equals(date)
+            //    &&
+            //   x.ActiveHour.IsBetween(time, new TimeOnly((time.Hour + (int)len + 1) % 24, 0) 
+            //   )).ToList()!=null || )
+            //if (ols.Find
+            //(x => (x.Date.Equals(date) &&
+            //(x.ActiveHour.IsBetween(time, new TimeOnly((time.Hour + (int)len + 1) % 24, 0))
+            //||
+            //time.IsBetween
+            //(x.ActiveHour,
+            //new TimeOnly
+            //(
+            //    (x.ActiveHour.Hour + (int)(activity.GetById(x.ActivityId).Result?.LenOfActivity)) % 24, 0
+            //)))))
+                
+                
+             
+             //if (ols.Find(x => (x.Date == date && x.ActiveHour >= time && x.ActiveHour.Hour<=(time.Hour+len)%24)) != null)
+             //    return false;
+             //if (els.Find(x => (x.Date == date && x.Time.Hour >= time.Hour && x.Time.Hour <= time.Hour +(int) len+1)) != null)
+             //   return false;
+             if(els.Find(x=> x.Date.Equals(date) && x.Time.IsBetween(time, new TimeOnly((time.Hour + (int)len + 1) % 24, 0)))!=null)
+                return false;
+            if (els.Find(x => x.Date.Equals(date) && time.IsBetween(x.Time, new TimeOnly((x.Time.Hour +(int) x.LenOfEvent + 1) % 24, 0))) != null)
+                return false;
+            return true;
+        }
     }
 }

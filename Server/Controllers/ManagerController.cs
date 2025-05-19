@@ -76,6 +76,19 @@ namespace Server.Controllers
             }
             return Ok(manager.GetActivitiesByManagerId(id).Result);
         }
+        [HttpGet("isEmpty/{id}/{date}/{time}/{len}")]
+        public IActionResult isEmpty(int id,DateOnly date,TimeOnly time, double len)
+        {
+            if (id == 0)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (id < 0)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(manager.isTimeEmpty(id,date,time,len).Result);
+        }
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {

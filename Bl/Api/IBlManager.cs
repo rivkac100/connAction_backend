@@ -16,5 +16,6 @@ namespace BL.Api
 
         public Task<List<BlCustomer>> GetCustomersByManagerId(int managerId);
         public Task<List<BlOrder>> GetOrdersByManagerId(int managerId);
+        public Task<bool> isTimeEmpty(int managerId,DateOnly date,TimeOnly time,double len);
     }
 }
