@@ -49,6 +49,7 @@ namespace BL.Services
                 InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
                 Pass=item.Pass,
+                UserType="customer",
                 Fax = item.Fax,
                 Mobile = item.Mobile,
                 Email = item.Email,

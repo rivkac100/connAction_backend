@@ -85,6 +85,7 @@ namespace BL.Services
                 Kategoty=item.Kategoty,
                 ImgPath=item.ImgPath,
                 Pass=item.Pass,
+                UserType="manager",
                 Activities= activity.listFromDalToBl(item.Activities.ToList()),
                 Events=evnt.listFromDalToBl(item.Events.ToList())
             };

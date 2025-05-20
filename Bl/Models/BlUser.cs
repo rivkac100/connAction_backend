@@ -9,5 +9,7 @@ namespace BL.Models
     public  class BlUser
     {
         public string Pass { get; set; } = null!;
+        public string UserType { get; set; } = null!;
+
     }
 }
