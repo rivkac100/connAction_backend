@@ -28,4 +28,6 @@ public partial class Order
     public virtual Broker? Broker { get; set; }
 
     public virtual Customer Customer { get; set; } = null!;
+
+    public virtual ICollection<Report> Reports { get; set; } = new List<Report>();
 }

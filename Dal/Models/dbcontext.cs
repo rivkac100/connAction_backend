@@ -29,6 +29,8 @@ public partial class dbcontext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
+    public virtual DbSet<Report> Reports { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\תיקייה כללית חדש\\שנה ב תשפה\\קבוצה א\\תלמידות\\##חוי וגיטי\\database\\db2.mdf;Integrated Security=True;Connect Timeout=30");
@@ -268,6 +270,49 @@ public partial class dbcontext : DbContext
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Orders_ToTable_1");
+        });
+
+        modelBuilder.Entity<Report>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Reports__3214EC07EFBB7D4E");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.ActivityId).HasColumnName("activityId");
+            entity.Property(e => e.CustomerId).HasColumnName("customerId");
+            entity.Property(e => e.Date)
+                .HasColumnType("datetime")
+                .HasColumnName("date");
+            entity.Property(e => e.IsOk)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("isOk");
+            entity.Property(e => e.ManagerId).HasColumnName("managerId");
+            entity.Property(e => e.OrderId).HasColumnName("orderId");
+            entity.Property(e => e.PaymentType)
+                .HasMaxLength(20)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("paymentType");
+
+            entity.HasOne(d => d.Activity).WithMany(p => p.Reports)
+                .HasForeignKey(d => d.ActivityId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Reports_ToTable_2");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Reports)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Reports_ToTable_1");
+
+            entity.HasOne(d => d.Manager).WithMany(p => p.Reports)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Reports_ToTable");
+
+            entity.HasOne(d => d.Order).WithMany(p => p.Reports)
+                .HasForeignKey(d => d.OrderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Reports_ToTable_3");
         });
 
         OnModelCreatingPartial(modelBuilder);

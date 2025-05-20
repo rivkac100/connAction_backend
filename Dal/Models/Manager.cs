@@ -44,4 +44,6 @@ public partial class Manager
     public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
 
     public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+
+    public virtual ICollection<Report> Reports { get; set; } = new List<Report>();
 }

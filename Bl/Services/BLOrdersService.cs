@@ -49,27 +49,26 @@ namespace BL.Services
             dal.Order.Update(fromBlToDal(item).Result);
 
 
-        public async Task<BlOrder> fromDalToBl(Order item)
-        {
-            //var activ =dal.Activity.GetById(item.ActivityId).Result;
-            BlOrder order = new();
-            order.OrderId = item.OrderId;
-            order.CustomerId = item.CustomerId;
-            order.ActivityId = item.ActivityId;
-            order.AmountOfParticipants = item.AmountOfParticipants;
-            order.BrokerId = item.BrokerId;
-            order.BrokerName = item.Broker?.BrokerName;
-            order.CustomerName = item.Customer?.InstituteName;
-            order.Payment = item.Payment;
-            order.ActivityPrice = item.Activity.Price;
-            order.ActivityNightPrice = item.Activity.NightPrice;
-            order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
-            order.Date = DateOnly.FromDateTime( item.Date);
-            order.LenOfActivity=item.Activity.LenOfActivity;
-            //order.ActivityName =activ==null? activ?.ActivityName :null;
-            order.ActivityName = item.Activity.ActivityName;
-            return order;
-        }
+        public async Task<BlOrder> fromDalToBl(Order item) =>
+         new()
+         {
+             OrderId = item.OrderId,
+             CustomerId = item.CustomerId,
+             ActivityId = item.ActivityId,
+             AmountOfParticipants = item.AmountOfParticipants,
+             BrokerId = item.BrokerId,
+             BrokerName = item.Broker?.BrokerName,
+             CustomerName = item.Customer?.InstituteName,
+             Payment = item.Payment,
+             ActivityPrice = item.Activity.Price,
+             ActivityNightPrice = item.Activity.NightPrice,
+             ActiveHour = TimeOnly.FromDateTime(item.Date),//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
+             Date = DateOnly.FromDateTime(item.Date),
+             LenOfActivity = item.Activity.LenOfActivity,
+             IsOk = item.IsOk,
+             IsPayment = item.IsPayment,
+             ActivityName = item.Activity.ActivityName
+         };
         public async Task<Order> fromBlToDal(BlOrder item)
         {
             //var activ = dal.Activity.GetById(item.ActivityId).Result;
@@ -83,8 +82,9 @@ namespace BL.Services
                 AmountOfParticipants = item.AmountOfParticipants, 
                 Date =new DateTime( item.Date.Year, item.Date.Month, item.Date.Day, item.ActiveHour.Hour, item.ActiveHour.Minute, item.ActiveHour.Second),
                 Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? item.ActivityNightPrice*item.AmountOfParticipants: item.ActivityPrice * item.AmountOfParticipants,
-                
-            };
+                IsOk = item.IsOk,
+                IsPayment = item.IsPayment
+        };
 
             return order;
         }

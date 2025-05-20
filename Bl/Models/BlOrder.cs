@@ -30,7 +30,9 @@ namespace BL.Models
         public int ActivityNightPrice { get; set; }
         public double LenOfActivity { get; set; }
         public string? ActivityName { get; set; }
+        public int? IsOk { get; set; }
 
+        public int? IsPayment { get; set; }
 
     }
 }
