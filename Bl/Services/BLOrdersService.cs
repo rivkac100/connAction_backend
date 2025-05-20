@@ -51,7 +51,7 @@ namespace BL.Services
 
         public async Task<BlOrder> fromDalToBl(Order item)
         {
-            var activ =dal.Activity.GetById(item.ActivityId).Result;
+            //var activ =dal.Activity.GetById(item.ActivityId).Result;
             BlOrder order = new();
             order.OrderId = item.OrderId;
             order.CustomerId = item.CustomerId;
@@ -61,16 +61,18 @@ namespace BL.Services
             order.BrokerName = item.Broker?.BrokerName;
             order.CustomerName = item.Customer?.InstituteName;
             order.Payment = item.Payment;
-            //order.ActivityPrice = item.Activity.Price;
-            //order.ActivityNightPrice=item.Activity.NightPrice;
+            order.ActivityPrice = item.Activity.Price;
+            order.ActivityNightPrice = item.Activity.NightPrice;
             order.ActiveHour = TimeOnly.FromDateTime(item.Date);//new(o.Date.TimeOfDay.Hours, o.Date.TimeOfDay.Minutes, o.Date.TimeOfDay.Seconds);
             order.Date = DateOnly.FromDateTime( item.Date);
-            order.ActivityName =activ==null? activ?.ActivityName :null;
+            order.LenOfActivity=item.Activity.LenOfActivity;
+            //order.ActivityName =activ==null? activ?.ActivityName :null;
+            order.ActivityName = item.Activity.ActivityName;
             return order;
         }
         public async Task<Order> fromBlToDal(BlOrder item)
         {
-            var activ = dal.Activity.GetById(item.ActivityId).Result;
+            //var activ = dal.Activity.GetById(item.ActivityId).Result;
 
             Order order = new Order
             {
@@ -80,7 +82,7 @@ namespace BL.Services
                 ActivityId = item.ActivityId,
                 AmountOfParticipants = item.AmountOfParticipants, 
                 Date =new DateTime( item.Date.Year, item.Date.Month, item.Date.Day, item.ActiveHour.Hour, item.ActiveHour.Minute, item.ActiveHour.Second),
-                Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? activ.NightPrice*item.AmountOfParticipants: activ.Price * item.AmountOfParticipants,
+                Payment =(item.ActiveHour.Hour>21 && item.ActiveHour.Hour<6)? item.ActivityNightPrice*item.AmountOfParticipants: item.ActivityPrice * item.AmountOfParticipants,
                 
             };
 

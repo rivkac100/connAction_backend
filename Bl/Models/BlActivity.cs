@@ -24,6 +24,7 @@ namespace BL.Models
         public int ManagerId { get; set; }
 
         public string ImgPath { get; set; }
+      
 
         //public virtual Manager Manager { get; set; } = null!;
         public List<BlOrder> Orders { get; set; } = new List<BlOrder>();

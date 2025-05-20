@@ -19,7 +19,11 @@ public partial class Order
 
     public int ActivityId { get; set; }
 
-    //public virtual Activity Activity { get; set; } = null!;
+    public int? IsOk { get; set; }
+
+    public int? IsPayment { get; set; }
+
+    public virtual Activity Activity { get; set; } = null!;
 
     public virtual Broker? Broker { get; set; }
 

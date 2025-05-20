@@ -43,7 +43,7 @@ namespace Dal.Services
         }
 
         public async Task<List<Activity>> GetAll()=>
-            dbcontext.Activities.Include(x => x.Orders).ToList();
+            dbcontext.Activities.Include(x => x.Orders).Include(x=> x.Manager).ToList();
         public dbcontext GetDbcontext()
         {
             return dbcontext;

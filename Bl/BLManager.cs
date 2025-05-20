@@ -19,6 +19,7 @@ namespace Bl
         public IBlActivity Activity { get; }
         public IBlEvent Event { get; set; }
         public IBlManager Manager { get; set; }
+        public IBlUser User { get; set; }
 
         public BLManager()
         {
@@ -35,7 +36,7 @@ namespace Bl
             services.AddSingleton<IBlActivity, BLActivityService>();
             services.AddSingleton<IBlEvent, BLEventService>();
             services.AddSingleton<IBlManager, BlManagerService>();
-
+            services.AddSingleton<IBlUser, BLUserService>();
             // ... 
             // הגדרת ספק לאוסף הסרוויסים
             ServiceProvider serviceProvider = services.BuildServiceProvider();
@@ -46,6 +47,7 @@ namespace Bl
             Activity =serviceProvider.GetRequiredService<IBlActivity>();
             Event=serviceProvider.GetRequiredService<IBlEvent>();
             Manager=serviceProvider.GetRequiredService<IBlManager>();
+            User=serviceProvider.GetRequiredService<IBlUser>();
         }
     }
 }

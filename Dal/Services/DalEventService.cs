@@ -1,5 +1,6 @@
 ﻿using Dal.Api;
 using Dal.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace Dal.Services
         }
 
         public async Task<List<Event>> GetAll()=>
-            dbcontext.Events.ToList();
+            dbcontext.Events.Include(e=> e.Manager).ToList();
 
         public async Task<Event?> GetById(int id)=>
            GetAll().Result.Find(x => x.Id == id);

@@ -30,6 +30,7 @@ namespace BL.Services
             {
                 //InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
+                Pass=item.Pass,
                 Fax = item.Fax,
                 Mobile = item.Mobile,
                 Email = item.Email,
@@ -47,6 +48,7 @@ namespace BL.Services
             {
                 InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
+                Pass=item.Pass,
                 Fax = item.Fax,
                 Mobile = item.Mobile,
                 Email = item.Email,

@@ -25,10 +25,9 @@ public partial class dbcontext : DbContext
 
     public virtual DbSet<Manager> Managers { get; set; }
 
-    public virtual DbSet<Order> Orders { get; set; }
+    public virtual DbSet<MyTask> MyTasks { get; set; }
 
-    public virtual DbSet<MyTask> Tasks { get; set; }
-    
+    public virtual DbSet<Order> Orders { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -62,10 +61,10 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.NightPrice).HasColumnName("nightPrice");
             entity.Property(e => e.Price).HasColumnName("price");
 
-            //entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
-            //    .HasForeignKey(d => d.ManagerId)
-            //    .OnDelete(DeleteBehavior.ClientSetNull)
-            //    .HasConstraintName("FK_Activities");
+            entity.HasOne(d => d.Manager).WithMany(p => p.Activities)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Activities");
         });
 
         modelBuilder.Entity<Broker>(entity =>
@@ -90,7 +89,7 @@ public partial class dbcontext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.InstituteId).HasName("PK__Customer__AF018B2C7F479291");
+            entity.HasKey(e => e.InstituteId).HasName("PK__tmp_ms_x__AF018B2C85F59526");
 
             entity.Property(e => e.InstituteId).HasColumnName("instituteId");
             entity.Property(e => e.Amount).HasColumnName("amount");
@@ -129,6 +128,10 @@ public partial class dbcontext : DbContext
                 .HasMaxLength(11)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("mobile");
+            entity.Property(e => e.Pass)
+                .HasMaxLength(11)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("pass");
         });
 
         modelBuilder.Entity<Event>(entity =>
@@ -151,10 +154,10 @@ public partial class dbcontext : DbContext
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("title");
 
-            //    entity.HasOne(d => d.Manager).WithMany(p => p.Events)
-            //        .HasForeignKey(d => d.ManagerId)
-            //        .OnDelete(DeleteBehavior.ClientSetNull)
-            //        .HasConstraintName("FK_events_ToTable");
+            entity.HasOne(d => d.Manager).WithMany(p => p.Events)
+                .HasForeignKey(d => d.ManagerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_events_ToTable");
         });
 
         modelBuilder.Entity<Manager>(entity =>
@@ -221,6 +224,19 @@ public partial class dbcontext : DbContext
                 .HasColumnName("pass");
         });
 
+        modelBuilder.Entity<MyTask>(entity =>
+        {
+            entity.HasKey(e => e.TaskId).HasName("PK__MyTasks__DD5D5A4296A4E1F5");
+
+            entity.Property(e => e.TaskId).HasColumnName("taskId");
+            entity.Property(e => e.TaskDescription)
+                .HasMaxLength(1000)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("taskDescription");
+            entity.Property(e => e.TaskIsDone).HasColumnName("taskIsDone");
+            entity.Property(e => e.TaskTime).HasColumnName("taskTime");
+        });
+
         modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(e => e.OrderId).HasName("PK__tmp_ms_x__0809335DC5B9C397");
@@ -233,14 +249,16 @@ public partial class dbcontext : DbContext
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
+            entity.Property(e => e.IsOk).HasColumnName("isOk");
+            entity.Property(e => e.IsPayment).HasColumnName("isPayment");
             entity.Property(e => e.Payment)
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("payment");
 
-            //entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
-            //    .HasForeignKey(d => d.ActivityId)
-            //    .OnDelete(DeleteBehavior.ClientSetNull)
-            //    .HasConstraintName("FK_Orders_ToTable");
+            entity.HasOne(d => d.Activity).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.ActivityId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Orders_ToTable");
 
             entity.HasOne(d => d.Broker).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BrokerId)
@@ -250,19 +268,6 @@ public partial class dbcontext : DbContext
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Orders_ToTable_1");
-        });
-
-        modelBuilder.Entity<MyTask>(entity =>
-        {
-            entity.HasKey(e => e.TaskId).HasName("PK__tmp_ms_x__DD5D5A4272AC8F11");
-
-            entity.Property(e => e.TaskId).HasColumnName("taskId");
-            entity.Property(e => e.TaskDescription)
-                .HasMaxLength(1000)
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
-                .HasColumnName("taskDescription");
-            entity.Property(e => e.TaskIsDone).HasColumnName("taskIsDone");
-            entity.Property(e => e.TaskTime).HasColumnName("taskTime");
         });
 
         OnModelCreatingPartial(modelBuilder);

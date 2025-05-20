@@ -9,6 +9,8 @@ public partial class Customer
 
     public string InstituteName { get; set; } = null!;
 
+    public string Pass { get; set; } = null!;
+
     public string? Fax { get; set; }
 
     public string? Mobile { get; set; }

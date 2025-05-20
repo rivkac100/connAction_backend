@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BL.Models
 {
-    public class BlManager
+    public class BlManager:BlUser
     {
       
         public int Id { get; set; }
 
         public string ManagerName { get; set; } = null!;
 
-        public string Pass { get; set; } = null!;
+        //public string Pass { get; set; } = null!;
 
 
         public string CompName { get; set; } = null!;

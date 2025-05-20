@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL.Models
 {
-    public class BlCustomer
+    public class BlCustomer:BlUser
     {
         public int InstituteId { get; set; }
 
