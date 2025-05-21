@@ -33,5 +33,8 @@ namespace BL.Services
 
         public async Task<BlUser>? GetById(string pass)=>
             GetAll().Result.Find(x=>x.Pass==pass);
+        public async Task<BlUser> GetById(string userType,int id) =>
+            userType=="customer"?customer.GetById(id).Result:manager.GetById(id).Result;
     }
+       
 }

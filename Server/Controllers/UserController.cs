@@ -37,5 +37,18 @@ namespace Server.Controllers
             }
             return Ok(user.GetById(pass).Result);
         }
+        [HttpGet("GetByid/{Type}/{id}")]
+        public IActionResult Get(string userType,int id)
+        {
+            if (id == 0)
+            {
+                return NotFound("Not Found Id");
+            }
+            if (id <1)
+            {
+                return BadRequest("Invalid Id");
+            }
+            return Ok(user.GetById(userType,id).Result);
+        }
     }
 }

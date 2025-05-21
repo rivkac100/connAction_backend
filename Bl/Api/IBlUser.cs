@@ -11,5 +11,6 @@ namespace BL.Api
     {
         Task<List<BlUser>> GetAll();
         Task<BlUser> GetById(string pass);
+        Task<BlUser> GetById(string userType, int id);
     }
 }
