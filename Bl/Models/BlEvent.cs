@@ -1,7 +1,8 @@
-﻿using System;
+﻿//בס"ד
+using System;
 using System.Collections.Generic;
 using System.Linq;
-//בס"ד
+
 
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,6 @@ namespace BL.Models
 
         public DateOnly Date { get; set; }
         public TimeOnly  Time { get; set; }
-        //
 
         public string Description { get; set; } = null!;
 
