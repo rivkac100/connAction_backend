@@ -66,7 +66,7 @@ namespace BL.Services
 
         public async Task<Dal.Models.Activity> fromBlToDal(BlActivity item)=>
              new()
-            {
+             {
                 ActivityId = item.ActivityId,
                 ActivityName = item.ActivityName,
                 ActivityDescription = item.ActivityDescription,

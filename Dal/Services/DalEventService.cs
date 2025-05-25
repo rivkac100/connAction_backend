@@ -18,17 +18,19 @@ namespace Dal.Services
         }
         public async Task Create(Event entity)
         {
-             dbcontext.Events.Add(entity);
 
             try
             {
-                
-                await dbcontext.SaveChangesAsync();
+                dbcontext.Events.Add(entity);
+
+                await dbcontext?.SaveChangesAsync();
             }
-            catch (Exception ex) {
-                throw new Exception("cant add event");
+            catch (Exception ex)
+            {
+                throw new Exception("cant save changes ");
+
             }
-          
+
         }
 
         public async Task Delete(int id)
