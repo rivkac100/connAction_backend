@@ -16,6 +16,8 @@ namespace BL.Api
         public IBlEvent Event { get; }
         public IBlManager Manager { get; }
         public IBlUser User { get; }
+        public IBlReport Report { get; }
+
 
     }
 }

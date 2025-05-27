@@ -23,7 +23,7 @@ namespace Server.Controllers
             {
                 return NotFound("Not Found");
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
         }
         [HttpGet("GetByid/{id}")]
         public IActionResult Get(int id)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetById(id));
+            return Ok(orders.GetById(id).Result);
         }
         [HttpGet("GetByDate/{date}")]
         public IActionResult Get(DateOnly date)
@@ -49,7 +49,7 @@ namespace Server.Controllers
             {
                 return BadRequest("Invalid Id");
             }
-            return Ok(orders.GetByDate(date));
+            return Ok(orders.GetByDate(date).Result);
         }
         //[HttpGet("GetByCustomerId/{customerId}")]
         //public IActionResult GetByCustomerId(int customerId)
@@ -71,7 +71,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
         }
         [HttpPut("Update")]
         public IActionResult Put(BlOrder c)
@@ -84,7 +84,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
-            return Ok(orders.Get());
+            return Ok(orders.Get().Result);
         }
         [HttpPost("Add")]
         public void Add(BlOrder c)
