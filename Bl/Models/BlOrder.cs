@@ -33,6 +33,7 @@ namespace BL.Models
         public int? IsOk { get; set; }
 
         public int? IsPayment { get; set; }
+        public  List<BlReport> Reports { get; set; } = new List<BlReport>();
 
     }
 }

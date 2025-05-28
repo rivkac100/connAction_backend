@@ -27,7 +27,7 @@ namespace Dal.Services
             dbcontext.Orders.Add(entity);
             try
             {
-              await  dbcontext.SaveChangesAsync();
+                dbcontext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -57,7 +57,7 @@ namespace Dal.Services
         /// </summary>
         /// <param name="order">עדכון הזמנה</param>
         public async Task<List<Order>> GetAll()=>
-            dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).Include(a=> a.Activity).ToList();
+            dbcontext.Orders.Include(o=> o.Broker).Include(o=>o.Customer).Include(a=> a.Activity).Include(x=> x.Reports).ToList();
 
         /// <summary> 
         ///get order by orderId

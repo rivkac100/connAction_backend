@@ -16,15 +16,16 @@ namespace BL.Services
     public class BLOrdersService : IBlOrder
     {
         IDal dal;
-
-        public BLOrdersService(IDal dal)
+        IBlReport rep;
+        public BLOrdersService(IDal dal, IBlReport rep)
         {
             this.dal = dal;
+            this.rep = rep;
 
 
         }
-        public async Task Create(BlOrder item) { 
-            await dal.Order.Create(fromBlToDal(item).Result);
+        public  async Task Create(BlOrder item) { 
+            dal.Order.Create(fromBlToDal(item).Result);
             var a = Get().Result[Get().Result.Count - 1].OrderId;
             var r = new Report()
             {
@@ -78,7 +79,8 @@ namespace BL.Services
              LenOfActivity = item.Activity.LenOfActivity,
              IsOk = item.IsOk,
              IsPayment = item.IsPayment,
-             ActivityName = item.Activity.ActivityName
+             ActivityName = item.Activity.ActivityName,
+             Reports=rep.listFromDalToBl(item.Reports.ToList()),
          };
         public async Task<Order> fromBlToDal(BlOrder item)
         {
