@@ -17,5 +17,6 @@ namespace BL.Api
         //public List<Order> ListToDal(List<BlOrder> o);
         public Task<List<BlOrder>> GetByDate(DateOnly date);
         Task<List<BlOrder>> GetByActivityId(int activityId);
+      
     }
 }

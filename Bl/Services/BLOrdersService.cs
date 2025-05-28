@@ -16,17 +16,28 @@ namespace BL.Services
     public class BLOrdersService : IBlOrder
     {
         IDal dal;
-       
+
         public BLOrdersService(IDal dal)
         {
             this.dal = dal;
-   
+
 
         }
-        public Task Create(BlOrder item)=>
-            dal.Order.Create(fromBlToDal(item).Result);
-
-
+        public async Task Create(BlOrder item) { 
+            await dal.Order.Create(fromBlToDal(item).Result);
+            var a = Get().Result[Get().Result.Count - 1].OrderId;
+            var r = new Report()
+            {
+                OrderId = a,
+                CustomerId = item.CustomerId,
+                ActivityId = item.ActivityId,
+                ManagerId = dal.Activity.GetById(item.ActivityId).Result.ManagerId,
+                IsOk = item.IsPayment==1 ? "true" : "false",
+                PaymentType="creditCard",
+                Date=DateTime.Now
+            };
+            dal.Report.Create(r);
+        }
         public Task Delete(int id)=>
             dal.Order.Delete(id);
 

@@ -87,7 +87,7 @@ namespace Server.Controllers
             return Ok(orders.Get().Result);
         }
         [HttpPost("Add")]
-        public void Add(BlOrder c)
+        public IActionResult Add(BlOrder c)
         {
             try
             {
@@ -97,6 +97,7 @@ namespace Server.Controllers
             {
                 Console.WriteLine(ex);
             }
+            return Ok(orders.Get().Result);
         }
     }
 }
