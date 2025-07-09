@@ -121,9 +121,9 @@ namespace BL.Services
             Get().Result.FindAll(x => x.ActivityId == activityId).ToList();
         public async Task<List<BlReport>> GetByManagerId(int mid) =>
            Get().Result.FindAll(x => x.ManagerId == mid).ToList();
-        public async Task<BlReport> GetByOrderId(int oid) =>
-           Get().Result.Find(x => x.OrderId == oid);
+        public async Task<BlReport>? GetByOrderId(int oid) =>
+           Get().Result.Find(x => x.OrderId == oid)!=null? Get().Result.Find(x => x.OrderId == oid):null;
         public async Task<List<BlReport>> GetByCustomerId(int cid) =>
-            Get().Result.FindAll(x => x.OrderId == cid).ToList();
+            Get().Result.FindAll(x => x.CustomerId == cid).ToList();
     }
 }

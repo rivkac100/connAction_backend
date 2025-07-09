@@ -15,7 +15,7 @@ public partial class Report
 
     public int ActivityId { get; set; }
 
-    public string PaymentType { get; set; } = null!;
+    public string? PaymentType { get; set; }
 
     public DateTime Date { get; set; }
 

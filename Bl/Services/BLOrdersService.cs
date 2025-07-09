@@ -25,9 +25,9 @@ namespace BL.Services
 
         }
         public  async Task Create(BlOrder item) { 
-            dal.Order.Create(fromBlToDal(item).Result);
-            var a = Get().Result[Get().Result.Count - 1].OrderId;
-            var r = new Report()
+          if(dal.Order.Create(fromBlToDal(item).Result).IsCompleted) { 
+            var a = Get().Result.Last().OrderId;
+            var r = new BlReport()
             {
                 OrderId = a,
                 CustomerId = item.CustomerId,
@@ -35,9 +35,9 @@ namespace BL.Services
                 ManagerId = dal.Activity.GetById(item.ActivityId).Result.ManagerId,
                 IsOk = item.IsPayment==1 ? "true" : "false",
                 PaymentType="creditCard",
-                Date=DateTime.Now
+                Date=DateOnly.FromDateTime(DateTime.Now),
             };
-            dal.Report.Create(r);
+            await  rep.Create(r);}
         }
         public Task Delete(int id)=>
             dal.Order.Delete(id);
@@ -80,7 +80,8 @@ namespace BL.Services
              IsOk = item.IsOk,
              IsPayment = item.IsPayment,
              ActivityName = item.Activity.ActivityName,
-             Reports=rep.listFromDalToBl(item.Reports.ToList()),
+             //Report =await !item.Reports.Count?null:rep.fromDalToBl(item.Reports.ToList().First()),
+             Report=await rep.GetByOrderId(item.OrderId),
          };
         public async Task<Order> fromBlToDal(BlOrder item)
         {

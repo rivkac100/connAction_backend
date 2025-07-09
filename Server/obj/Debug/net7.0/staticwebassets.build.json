@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I8/W0uVLARV17iAe+25XP1b89iDmJy9PwB6Hul+jfek=",
+  "Hash": "SDdBGf/mdwd1qd+Dc3lOGjNgUMQuhdOp65aE6qVyvhI=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
@@ -272,6 +272,23 @@
       "OriginalItemSpec": "wwwroot\\IMG\\68fc6b80.jpg"
     },
     {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\69a2328b.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/69a2328b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\69a2328b.jpg"
+    },
+    {
       "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\7ae516a9.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
@@ -357,6 +374,23 @@
       "OriginalItemSpec": "wwwroot\\IMG\\a644d750.JPG"
     },
     {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\adfa921e.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/adfa921e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\adfa921e.jpg"
+    },
+    {
       "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b1844c61.jpg",
       "SourceId": "Server",
       "SourceType": "Discovered",
@@ -389,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\IMG\\b18abf80.jpg"
+    },
+    {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b6842849.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/b6842849.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\b6842849.jpg"
     },
     {
       "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\b90d7686.JPG",
@@ -491,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\IMG\\dcfc4771.jpg"
+    },
+    {
+      "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\e263fbb5.jpg",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "IMG/e263fbb5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\e263fbb5.jpg"
     },
     {
       "Identity": "D:\\גיטי קאהן\\bsd-c--c-g\\Server\\wwwroot\\IMG\\e84008c8.jpg",

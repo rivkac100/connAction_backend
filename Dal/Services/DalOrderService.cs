@@ -24,7 +24,7 @@ namespace Dal.Services
         /// <param name="order">עדכון הזמנה</param>
         public async Task Create(Order entity)
         {
-            dbcontext.Orders.Add(entity);
+            await  dbcontext.Orders.AddAsync(entity);
             try
             {
                 dbcontext.SaveChangesAsync();
@@ -44,7 +44,7 @@ namespace Dal.Services
         {
             dbcontext.Remove(GetAll().Result.Find(x => x.OrderId == id));
             try { 
-           await dbcontext.SaveChangesAsync();
+            await dbcontext.SaveChangesAsync();
             }
             catch(Exception ex) {
                 throw new Exception("cant save changes ");

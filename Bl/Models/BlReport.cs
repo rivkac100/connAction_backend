@@ -45,7 +45,7 @@ namespace BL.Models
 
         public int ActivityId { get; set; }
 
-        public string PaymentType { get; set; } = null!;
+        public string? PaymentType { get; set; } = null!;
 
         public DateOnly Date { get; set; }
 

@@ -38,9 +38,9 @@ namespace BL.Services
                 ContactPhone = item.ContactPhone,
                 City = item.City,
                 Community = item.Community,
-                Amount = item.Amount,
-                Due = item.Due,
-                Orders =order.listFromBlToDal(item.Orders.ToList())
+                Amount = 0,
+                Due = 0,
+               // Orders =order.listFromBlToDal(item.Orders.ToList())
            };
 
         public async  Task<BlCustomer> fromDalToBl(Customer item)=>

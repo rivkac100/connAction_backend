@@ -18,7 +18,7 @@ namespace Dal.Services
 
         public async Task Create(Report a)
         {
-            dbcontext.Reports.Add(a);
+            await dbcontext.Reports.AddAsync(a);
             await dbcontext.SaveChangesAsync();
 
         }

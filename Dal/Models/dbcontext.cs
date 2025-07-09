@@ -274,9 +274,8 @@ public partial class dbcontext : DbContext
 
         modelBuilder.Entity<Report>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Reports__3214EC07EFBB7D4E");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC0709561313");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.ActivityId).HasColumnName("activityId");
             entity.Property(e => e.CustomerId).HasColumnName("customerId");
             entity.Property(e => e.Date)
