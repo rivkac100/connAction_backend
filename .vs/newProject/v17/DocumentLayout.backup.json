@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|solutionrelative:newproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666EF7E2-DC2D-46CA-B47D-A26B87C776A3}|Bl\\BL.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\bl\\services\\bleventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666EF7E2-DC2D-46CA-B47D-A26B87C776A3}|Bl\\BL.csproj|solutionrelative:bl\\services\\bleventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\.gitignore",
+              "RelativeDocumentMoniker": "newProject\\.gitignore",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\.gitignore",
+              "RelativeToolTip": "newProject\\.gitignore",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-04T14:40:47.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BLEventService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Bl\\Services\\BLEventService.cs",
+              "RelativeDocumentMoniker": "Bl\\Services\\BLEventService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Bl\\Services\\BLEventService.cs",
+              "RelativeToolTip": "Bl\\Services\\BLEventService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T14:35:16.808Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
