@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dal.Models;
 
 public partial class Customer
 {
+    [Key]
     public int InstituteId { get; set; }
 
     public string InstituteName { get; set; } = null!;

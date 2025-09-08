@@ -65,11 +65,9 @@
               "target": "Package",
               "version": "[7.0.20, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[7.0.11, )"
             }
           },
           "imports": [

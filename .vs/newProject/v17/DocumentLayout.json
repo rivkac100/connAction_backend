@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|solutionrelative:dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\dal\\models\\mytask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|solutionrelative:dal\\models\\mytask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\dal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|solutionrelative:dal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\dal\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|solutionrelative:dal\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3A0D1D67-4832-43E5-B497-9361428F51AD}|Dal\\Dal.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666EF7E2-DC2D-46CA-B47D-A26B87C776A3}|Bl\\BL.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{666EF7E2-DC2D-46CA-B47D-A26B87C776A3}|Bl\\BL.csproj|solutionrelative:bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|solutionrelative:newproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4AFA0423-DCA0-4250-8A50-ECC7678DAA49}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|c:\\users\\user\\desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{17675DDF-E973-4967-ACAA-9818E5100E40}|newProject\\UI.csproj|solutionrelative:newproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -18,24 +58,155 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dal",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Dal.csproj",
+              "RelativeDocumentMoniker": "Dal\\Dal.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Dal.csproj",
+              "RelativeToolTip": "Dal\\Dal.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-08T08:19:44.388Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Dal\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\Order.cs",
+              "RelativeToolTip": "Dal\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T09:14:52.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyTask.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\MyTask.cs",
+              "RelativeDocumentMoniker": "Dal\\Models\\MyTask.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\MyTask.cs",
+              "RelativeToolTip": "Dal\\Models\\MyTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T09:14:28.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Dal\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\Customer.cs",
+              "RelativeToolTip": "Dal\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T09:13:20.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BL",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Bl\\BL.csproj",
+              "RelativeDocumentMoniker": "Bl\\BL.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Bl\\BL.csproj",
+              "RelativeToolTip": "Bl\\BL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-08T08:27:07.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbcontext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\dbcontext.cs",
+              "RelativeDocumentMoniker": "Dal\\Models\\dbcontext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Dal\\Models\\dbcontext.cs",
+              "RelativeToolTip": "Dal\\Models\\dbcontext.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA7wAMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T07:44:17.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAhwCkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T07:38:20.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\Program.cs",
+              "RelativeDocumentMoniker": "newProject\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\Program.cs",
+              "RelativeToolTip": "newProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T07:38:08.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\appsettings.json",
+              "RelativeToolTip": "Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-08T07:19:26.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Server",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-08T06:42:44.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\.gitignore",
               "RelativeDocumentMoniker": "newProject\\.gitignore",
               "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\newProject\\.gitignore",
               "RelativeToolTip": "newProject\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-09-04T14:40:47.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "BLEventService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9\u05D5\u05E0\u05D5\u05EA\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\bsd-c--c-g\\Bl\\Services\\BLEventService.cs",
               "RelativeDocumentMoniker": "Bl\\Services\\BLEventService.cs",
