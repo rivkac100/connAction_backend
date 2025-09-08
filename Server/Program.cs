@@ -3,6 +3,9 @@
 
 using Bl;
 using BL.Api;
+using System;
+using Microsoft.EntityFrameworkCore;
+using Dal.Models;
 
 namespace Server
 {
@@ -16,6 +19,13 @@ namespace Server
 
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<dbcontext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+           
+
+            //var builder = WebApplication.CreateBuilder(args);
+
             // Add services to the container.
             builder.Services.AddSingleton<IBl,BLManager>();
 
@@ -27,7 +37,9 @@ namespace Server
              option => option.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
             //להעתיק אחרי הגדרת ה app
-         
+
+            
+            
 
             var app = builder.Build();
             app.UseStaticFiles();
