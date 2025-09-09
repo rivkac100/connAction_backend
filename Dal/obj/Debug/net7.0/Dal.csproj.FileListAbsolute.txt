@@ -1,0 +1,71 @@
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\bin\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\גיטי קאהן\פרויקט סיום\newProject\Dal\obj\Debug\net7.0\ref\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+A:\גיטי וחוי\CHAVI AND GITTY\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
+D:\גיטי קאהן\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\גיטי קאהן\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\גיטי קאהן\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\גיטי קאהן\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\חוי רוטנברג\C#\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.deps.json
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.dll
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\bin\Debug\net7.0\Dal.pdb
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.sourcelink.json
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.dll
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\refint\Dal.dll
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.pdb
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Dal\obj\Debug\net7.0\ref\Dal.dll
