@@ -414,3 +414,4 @@ C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Server\obj\Debug
 C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Server\obj\Debug\net7.0\Server.pdb
 C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Server\obj\Debug\net7.0\Server.genruntimeconfig.cache
 C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Server\obj\Debug\net7.0\ref\Server.dll
+C:\Users\User\Desktop\שונות\פרויקט גמר\bsd-c--c-g\Server\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

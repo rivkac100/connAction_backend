@@ -57,7 +57,7 @@ namespace Dal.Services
             
             //dbcontext.Customers.Update(customer);
             var clist = dbcontext.Customers.ToList();
-            var x=clist.Find(x => x.Pass == customer.Pass);
+            var x=clist.Find(x => x.InstituteId == customer.InstituteId);
            if (x != null) {
                 // dbcontext.Customers.Update(x);
 

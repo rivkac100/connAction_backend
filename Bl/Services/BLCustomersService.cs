@@ -28,7 +28,7 @@ namespace BL.Services
         public async Task<Customer> fromBlToDal(BlCustomer item)=>
           new Customer()
             {
-                //InstituteId = item.InstituteId,
+                InstituteId = item.InstituteId,
                 InstituteName = item.InstituteName,
                 Pass=item.Pass,
                 Fax = item.Fax,
